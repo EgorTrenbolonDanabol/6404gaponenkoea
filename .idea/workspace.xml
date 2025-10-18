@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60681bbc-b6ac-43f4-88af-3b6bc251e91e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/implementation/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/implementation/image_processing.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/i_image_processing.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/NotreDame.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/billiard.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_images/chessboard.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
