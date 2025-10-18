@@ -7,7 +7,7 @@ import time  # <-- для измерения времени
 
 # Путь к папке с изображениями
 images_folder = "test_images"
-input_image_path = os.path.join(images_folder, "NotreDame.jpg")
+input_image_path = os.path.join(images_folder, "NotreDameыеу.jpg")
 
 image = cv2.imread(input_image_path)
 if image is None:
