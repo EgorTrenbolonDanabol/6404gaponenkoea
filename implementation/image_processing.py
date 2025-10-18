@@ -50,22 +50,50 @@ class ImageProcessing(interfaces.IImageProcessing):
         Returns:
             np.ndarray: Изображение после применения свёртки.
         """
-        return cv2.filter2D(image, -1, kernel)
 
+        kernel_height, kernel_width = kernel.shape
+
+        padding_height = kernel_height // 2
+        padding_width = kernel_width // 2
+
+        if len(image.shape) == 3:
+            # (0,0) означает не добавлять ничего по каналам
+            padded_image = np.pad(image, (
+                (padding_height, padding_height),
+                (padding_width, padding_width),
+                (0, 0)),
+                                  mode='constant')
+
+            height, width, canals = image.shape
+            new_image = np.zeros((height, width, canals), dtype=np.float32)
+            for i in range(height):
+                for j in range(width):
+                    for x in range(canals):
+                        new_image[i][j] = np.sum(
+                            kernel * padded_image[i:i + kernel_height, j:j + kernel_width, x]
+
+                        )
+        else:
+            padded_image = np.pad(image,
+                                  ((padding_height, padding_height),
+                                   (padding_width, padding_width)),
+                                  mode='constant')
+
+            height, width = image.shape
+            new_image = np.zeros((height, width), dtype=np.float32)
+            for i in range(height):
+                for j in range(width):
+                    new_image [i][j]= np.sum(
+                        kernel * padded_image[i:i + kernel_height, j:j +kernel_width]
+
+                    )
+
+
+        return new_image
+# формула ярксти, в итоге получаются сервые оттенки
     def _rgb_to_grayscale(self, image: np.ndarray) -> np.ndarray:
-        """
-        Преобразует RGB-изображение в оттенки серого.
 
-        Использует функцию cv2.cvtColor для преобразования цветного изображения
-        в чёрно-белое.
-
-        Args:
-            image (np.ndarray): Входное RGB-изображение.
-
-        Returns:
-            np.ndarray: Одноканальное изображение в оттенках серого.
-        """
-        return cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
+        return np.dot(image[:,:,:], [0.299, 0.587, 0.114]).astype(np.uint8)
 
     def _gamma_correction(self, image: np.ndarray, gamma: float) -> np.ndarray:
         """
@@ -80,10 +108,8 @@ class ImageProcessing(interfaces.IImageProcessing):
         Returns:
             np.ndarray: Изображение после гамма-коррекции.
         """
-        inv_gamma = 1.0 / gamma
-        table = np.array([(i / 255.0) ** inv_gamma * 255
-                          for i in range(256)]).astype("uint8")
-        return cv2.LUT(image, table)
+        image = 255 * (image / 255) ** (gamma)
+        return image.astype(np.uint8)
 
     def edge_detection(self, image: np.ndarray) -> np.ndarray:
         """
@@ -98,9 +124,23 @@ class ImageProcessing(interfaces.IImageProcessing):
         Returns:
             np.ndarray: Одноканальное изображение с выделенными границами.
         """
+        # чтоб работать только с одним каналом, черно белым
         gray = self._rgb_to_grayscale(image)
-        edges = cv2.Canny(gray, 100, 200)
-        return edges
+
+
+        sobel_x = np.array([[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]])
+        sobel_y = np.array([[-1, -2, -1], [0, 0, 0], [1, 2, 1]])
+
+        grad_x = self._convolution(gray, sobel_x)
+        grad_y = self._convolution(gray, sobel_y)
+
+        result_grad = np.sqrt(grad_x ** 2 + grad_y ** 2)
+
+        #чтобы только черно белое было
+        edges = (result_grad / result_grad.max() * 255).astype(np.uint8)
+        binary_edges = (edges > 50).astype(np.uint8) * 255
+
+        return binary_edges
 
     def corner_detection(self, image: np.ndarray) -> np.ndarray:
         """
@@ -116,12 +156,47 @@ class ImageProcessing(interfaces.IImageProcessing):
             np.ndarray: Изображение с выделенными углами (красные точки).
         """
         gray = self._rgb_to_grayscale(image)
-        gray = np.float32(gray)
-        dst = cv2.cornerHarris(gray, 2, 3, 0.04)
-        dst = cv2.dilate(dst, None)
-        result = image.copy()
-        result[dst > 0.01 * dst.max()] = [255, 0, 0]
-        return result
+
+        # Вычисляем градиенты
+        sobel_x = np.array([[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]])
+        sobel_y = np.array([[-1, -2, -1], [0, 0, 0], [1, 2, 1]])
+
+        Ix = self._convolution(gray, sobel_x)
+        Iy = self._convolution(gray, sobel_y)
+
+
+        Ix2 = Ix * Ix
+        Iy2 = Iy * Iy
+        Ixy = Ix * Iy
+
+        # Гауссово размытие для убирания шума
+        gaussian_kernel = np.array([[1, 2, 1],
+                                    [2, 4, 2],
+                                    [1, 2, 1]]) / 16.0
+
+        Ix2_smooth = self._convolution(Ix2, gaussian_kernel)
+        Iy2_smooth = self._convolution(Iy2, gaussian_kernel)
+        Ixy_smooth = self._convolution(Ixy, gaussian_kernel)
+
+        #ЧДУ
+        k = 0.04
+    #сильные изменениях в обоих направлениях
+        det_M = Ix2_smooth * Iy2_smooth - Ixy_smooth * Ixy_smooth
+        trace_M = Ix2_smooth + Iy2_smooth
+        R = det_M - k * (trace_M ** 2)
+
+        threshold = 0.01 * R.max()
+        result_image = image.copy()
+
+        y_coords, x_coords = np.where(R > threshold)
+
+        for i in range(len(y_coords)):
+            y = y_coords[i]
+            x = x_coords[i]
+            cv2.circle(result_image, (x, y), 3, (0, 0, 255), -1)
+
+        return result_image
+
 
     def circle_detection(self, image: np.ndarray) -> np.ndarray:
         """
