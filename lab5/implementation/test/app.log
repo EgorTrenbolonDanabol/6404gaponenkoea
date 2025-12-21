@@ -1,0 +1,16 @@
+2025-12-20 15:02:55 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): api.thecatapi.com:443
+2025-12-20 15:02:56 | DEBUG | connectionpool.py:544 | https://api.thecatapi.com:443 "GET /v1/images/search?limit=1&has_breeds=1 HTTP/1.1" 200 None
+2025-12-20 15:02:56 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): cdn2.thecatapi.com:443
+2025-12-20 15:02:57 | DEBUG | connectionpool.py:544 | https://cdn2.thecatapi.com:443 "GET /images/k71ULYfRr.jpg HTTP/1.1" 200 433500
+2025-12-20 15:02:57 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): api.thecatapi.com:443
+2025-12-20 15:02:58 | DEBUG | connectionpool.py:544 | https://api.thecatapi.com:443 "GET /v1/images/search?limit=1&has_breeds=1 HTTP/1.1" 200 None
+2025-12-20 15:02:58 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): cdn2.thecatapi.com:443
+2025-12-20 15:02:59 | DEBUG | connectionpool.py:544 | https://cdn2.thecatapi.com:443 "GET /images/ZGoY_Ivly.jpg HTTP/1.1" 200 132939
+2025-12-21 19:04:20 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): api.thecatapi.com:443
+2025-12-21 19:04:21 | DEBUG | connectionpool.py:544 | https://api.thecatapi.com:443 "GET /v1/images/search?limit=1&has_breeds=1 HTTP/1.1" 200 None
+2025-12-21 19:04:21 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): cdn2.thecatapi.com:443
+2025-12-21 19:04:22 | DEBUG | connectionpool.py:544 | https://cdn2.thecatapi.com:443 "GET /images/tnxX4IOst.jpg HTTP/1.1" 200 194660
+2025-12-21 19:04:22 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): api.thecatapi.com:443
+2025-12-21 19:04:23 | DEBUG | connectionpool.py:544 | https://api.thecatapi.com:443 "GET /v1/images/search?limit=1&has_breeds=1 HTTP/1.1" 200 None
+2025-12-21 19:04:23 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): cdn2.thecatapi.com:443
+2025-12-21 19:04:23 | DEBUG | connectionpool.py:544 | https://cdn2.thecatapi.com:443 "GET /images/TuXvdAni3.jpg HTTP/1.1" 200 741347

@@ -1,2 +1,5 @@
 .venv/
+lab5/results/
 __pycache__/
+.idea/
+*.pyc
