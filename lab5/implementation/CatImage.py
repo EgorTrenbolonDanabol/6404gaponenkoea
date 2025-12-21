@@ -1,14 +1,17 @@
-from abc import ABC
 import numpy as np
 import cv2
+
 from lab5.implementation import ImageProcessing
+from abc import ABC, abstractmethod
 
 
 class CatImage(ABC):
+    """Класс, инкапсулирующий изображение кота и методы обработки."""
+
     def __init__(self, image: np.ndarray, breed: str, url: str):
-        self._image = image
-        self._breed = breed
-        self._url = url
+        self._image = image  # картинка
+        self._breed = breed  # порода
+        self._url = url  # ссылка
         self._processor = ImageProcessing()
 
     @property
@@ -26,57 +29,75 @@ class CatImage(ABC):
     def __str__(self) -> str:
         return f"CatImage(breed={self._breed}, url={self._url})"
 
+    def edge_detection_cv(self) -> "CatImage":
+        from lab5.implementation.GreyCatImage import GreyCatImage
+        return GreyCatImage(self._processor.library_edge_detection(self._image), self._breed, self._url)
+
+    def edge_detection_custom(self) -> "CatImage":
+        from lab5.implementation.GreyCatImage import GreyCatImage
+        return GreyCatImage(self._processor.edge_detection(self._image), self._breed, self._url)
+
+    def corner_detection_custom(self) -> "CatImage":
+        from lab5.implementation.ColorCatImage import ColorCatImage
+        from lab5.implementation.GreyCatImage import GreyCatImage
+        result_img = self._processor.corner_detection(self._image)
+        if result_img.ndim == 2:
+            return GreyCatImage(result_img, self._breed, self._url)
+        else:
+            return ColorCatImage(result_img, self._breed, self._url)
+
+    def corner_detection_cv(self) -> "CatImage":
+        from lab5.implementation.ColorCatImage import ColorCatImage
+        from lab5.implementation.GreyCatImage import GreyCatImage
+        result_img = self._processor.library_corner_detection(self._image)
+        if result_img.ndim == 2:  # серое изображение
+            return GreyCatImage(result_img, self._breed, self._url)
+        else:
+            return ColorCatImage(result_img, self._breed, self._url)
+
     def __add__(self, other: "CatImage") -> np.ndarray:
+        if not isinstance(other, CatImage):
+            return NotImplemented
+        if self._image.ndim == 2 and other._image.ndim == 3:
+            other._image = other.to_grayscale()
 
-        img_self = self._image
-        img_other = other._image
+        if self._image.ndim == 3 and other._image.ndim == 2:
+            other._image = other.to_color()
 
-        if len(img_self.shape) == 2 and len(img_other.shape) == 3:
-            img_other = other.to_grayscale()
+        if self._image.shape != other._image.shape:
+            h = self._image.shape[0]
+            w = self._image.shape[1]
+            other._image = cv2.resize(other._image, (w, h))
 
-        if len(img_self.shape) == 3 and len(img_other.shape) == 2:
-            img_other = other.to_color()
+        result = self._image.astype(np.int16) + other._image.astype(np.int16)
 
-        if img_self.shape != img_other.shape:
-            height, width = img_self.shape[:2]
-            img_other = cv2.resize(img_other, (width, height))
-
-        result = img_self.astype(np.int16) + img_other.astype(np.int16)
         return np.clip(result, 0, 255).astype(np.uint8)
 
     def __sub__(self, other: "CatImage") -> np.ndarray:
 
-        img_self = self._image
-        img_other = other._image
-        print(f"[LOG] До начала преобразований")
-        print(f"[LOG] max Уменьшаемое {img_self.max()}")
-        print(f"[LOG] max Вычитаемое {img_other.max()}")
+        if not isinstance(other, CatImage):
+            return NotImplemented
 
-        if img_self.ndim == 2 and img_other.ndim == 3:
-            img_other = other.to_grayscale()
+        if self._image.ndim == 2 and other._image.ndim == 3:
+            other._image = other.to_grayscale()
 
-        if img_self.ndim == 3 and img_other.ndim == 2:
-            img_other = other.to_color()
+        if self._image.ndim == 3 and other._image.ndim == 2:
+            other._image = other.to_color()
 
-        if img_self.shape != img_other.shape:
-            height, width = img_self.shape[:2]
-            img_other = cv2.resize(img_other, (width, height))
+        if self._image.shape != other._image.shape:
+            h = self._image.shape[0]
+            w = self._image.shape[1]
+            other._image = cv2.resize(other._image, (w, h))
 
-        result = img_self.astype(np.float32) - img_other.astype(np.float32)
 
-        result_min = result.min()
-        result_sub = result - result_min
-        result_max = result.max()
-        result_division = result_sub / result_max
-        result_mul = result_division * 255
-        return result_mul.astype(np.uint8)
 
-    def cv_edge_detection(self) -> "CatImage":
-        from lab5.implementation.GrayCatImage import GrayCatImage
-        edge = self._processor.cv_edge_detection(self._image)
-        return  GrayCatImage(edge, self._breed, self._url)
+        result = self._image.astype(np.int16) - other._image.astype(np.int16)
+        return np.clip(result, 0, 255).astype(np.uint8)
 
-    def my_edge_detection(self) -> "CatImage":
-        from lab5.implementation.GrayCatImage import GrayCatImage
-        edge = self._processor.edge_detection(self._image)
-        return  GrayCatImage(edge, self._breed, self._url)
+    @abstractmethod
+    def to_grayscale(self) -> np.ndarray:
+        pass
+
+    @abstractmethod
+    def to_color(self) -> np.ndarray:
+        pass

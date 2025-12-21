@@ -1,19 +1,19 @@
 import numpy as np
-import cv2
 
-from lab5.implementation import CatImage
+from lab5.implementation.CatImage import CatImage
 
 
 class ColorCatImage(CatImage):
 
-    def __init__(self, image_data: np.ndarray, image_url: str, breed: str):
-
-        if len(image_data.shape) == 2:
-            image_data = cv2.cvtColor(image_data, cv2.COLOR_GRAY2BGR)
-
-        gray_image = image_data
-        super().__init__(gray_image, image_url, breed)
+    def __init__(self, image: np.ndarray, breed: str, url: str):
+        if image.ndim != 3:
+            raise ValueError(
+                f"Ожидалось цветное изображение, получено {image.ndim}D с формой {image.shape}"
+            )
+        super().__init__(image, breed, url)
 
     def to_grayscale(self) -> np.ndarray:
-        """Доп.метод: вернуть чб изображение."""
         return self._processor._rgb_to_grayscale(self._image)
+
+    def to_color(self) -> np.ndarray:
+        return self._image

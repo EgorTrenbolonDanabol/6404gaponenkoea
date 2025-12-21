@@ -7,7 +7,7 @@ import numpy as np
 import time
 from concurrent.futures import ProcessPoolExecutor
 from dotenv import load_dotenv
-from lab5.implementation import ColorCatImage, GrayCatImage, setup_logger
+from lab5.implementation import ColorCatImage, GreyCatImage, setup_logger
 
 
 
@@ -27,11 +27,11 @@ def convolution_worker(idx, breed, image, url):
     if image.ndim == 3:
         cat = ColorCatImage(image, breed, url)
     else:
-        cat = GrayCatImage(image, breed, url)
+        cat = GreyCatImage(image, breed, url)
     result = {
         "original": cat,
-        "cv_edges": cat.cv_edge_detection(),
-        "my_edges": cat.my_edge_detection()
+        "cv_edges": cat.edge_detection_cv(),
+        "my_edges": cat.edge_detection_custom()
     }
     logger.debug(f"[ConvolutionWorker] Finished processing idx={idx}")
     return result

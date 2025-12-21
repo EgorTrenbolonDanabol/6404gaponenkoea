@@ -14,3 +14,162 @@
 2025-12-21 19:04:23 | DEBUG | connectionpool.py:544 | https://api.thecatapi.com:443 "GET /v1/images/search?limit=1&has_breeds=1 HTTP/1.1" 200 None
 2025-12-21 19:04:23 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): cdn2.thecatapi.com:443
 2025-12-21 19:04:23 | DEBUG | connectionpool.py:544 | https://cdn2.thecatapi.com:443 "GET /images/TuXvdAni3.jpg HTTP/1.1" 200 741347
+2025-12-21 20:32:32 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): api.thecatapi.com:443
+2025-12-21 20:32:33 | DEBUG | connectionpool.py:544 | https://api.thecatapi.com:443 "GET /v1/images/search?limit=1&has_breeds=1 HTTP/1.1" 200 None
+2025-12-21 20:32:33 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): cdn2.thecatapi.com:443
+2025-12-21 20:32:34 | DEBUG | connectionpool.py:544 | https://cdn2.thecatapi.com:443 "GET /images/RIRLq-8sp.jpg HTTP/1.1" 200 146676
+2025-12-21 20:32:34 | INFO | CatImageProcessor.py:63 | fetched image Cornish Rex (https://cdn2.thecatapi.com/images/RIRLq-8sp.jpg)
+2025-12-21 20:32:34 | INFO | CatImageProcessor.py:19 | fetch_images executed in 1.610 sec.
+2025-12-21 20:32:34 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): api.thecatapi.com:443
+2025-12-21 20:32:34 | DEBUG | connectionpool.py:544 | https://api.thecatapi.com:443 "GET /v1/images/search?limit=1&has_breeds=1 HTTP/1.1" 200 None
+2025-12-21 20:32:34 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): cdn2.thecatapi.com:443
+2025-12-21 20:32:35 | DEBUG | connectionpool.py:544 | https://cdn2.thecatapi.com:443 "GET /images/AYfFc4vOB.jpg HTTP/1.1" 200 325009
+2025-12-21 20:32:35 | INFO | CatImageProcessor.py:63 | fetched image Persian (https://cdn2.thecatapi.com/images/AYfFc4vOB.jpg)
+2025-12-21 20:32:35 | INFO | CatImageProcessor.py:19 | fetch_images executed in 1.187 sec.
+2025-12-21 20:32:35 | INFO | CatImageProcessor.py:74 | original saved: test_real_results\1_Persian_original.png
+2025-12-21 20:32:35 | INFO | CatImageProcessor.py:74 | cv_edges saved: test_real_results\1_Persian_cv_edges.png
+2025-12-21 20:32:45 | INFO | CatImageProcessor.py:74 | custom_edges saved: test_real_results\1_Persian_custom_edges.png
+2025-12-21 20:32:45 | INFO | CatImageProcessor.py:74 | cv_corners saved: test_real_results\1_Persian_cv_corners.png
+2025-12-21 20:33:09 | INFO | CatImageProcessor.py:74 | custom_corners saved: test_real_results\1_Persian_custom_corners.png
+2025-12-21 20:33:09 | INFO | CatImageProcessor.py:91 | All images was saved for Persian
+2025-12-21 20:33:09 | INFO | CatImageProcessor.py:19 | process_and_save executed in 33.548 sec.
+2025-12-21 20:35:19 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): api.thecatapi.com:443
+2025-12-21 20:35:36 | DEBUG | connectionpool.py:544 | https://api.thecatapi.com:443 "GET /v1/images/search?limit=1&has_breeds=1 HTTP/1.1" 200 None
+2025-12-21 20:35:36 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): cdn2.thecatapi.com:443
+2025-12-21 20:35:36 | DEBUG | connectionpool.py:544 | https://cdn2.thecatapi.com:443 "GET /images/-Zfz5z2jK.jpg HTTP/1.1" 200 224819
+2025-12-21 20:35:37 | INFO | CatImageProcessor.py:63 | fetched image Persian (https://cdn2.thecatapi.com/images/-Zfz5z2jK.jpg)
+2025-12-21 20:35:37 | INFO | CatImageProcessor.py:19 | fetch_images executed in 17.122 sec.
+2025-12-21 20:35:37 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): api.thecatapi.com:443
+2025-12-21 20:35:37 | DEBUG | connectionpool.py:544 | https://api.thecatapi.com:443 "GET /v1/images/search?limit=1&has_breeds=1 HTTP/1.1" 200 None
+2025-12-21 20:35:37 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): cdn2.thecatapi.com:443
+2025-12-21 20:35:38 | DEBUG | connectionpool.py:544 | https://cdn2.thecatapi.com:443 "GET /images/mNOdlAkXR.jpg HTTP/1.1" 200 118263
+2025-12-21 20:35:38 | INFO | CatImageProcessor.py:63 | fetched image Cheetoh (https://cdn2.thecatapi.com/images/mNOdlAkXR.jpg)
+2025-12-21 20:35:38 | INFO | CatImageProcessor.py:19 | fetch_images executed in 1.149 sec.
+2025-12-21 20:35:38 | INFO | CatImageProcessor.py:74 | original saved: test_real_results\1_Cheetoh_original.png
+2025-12-21 20:35:38 | INFO | CatImageProcessor.py:74 | cv_edges saved: test_real_results\1_Cheetoh_cv_edges.png
+2025-12-21 20:35:47 | INFO | CatImageProcessor.py:74 | custom_edges saved: test_real_results\1_Cheetoh_custom_edges.png
+2025-12-21 20:35:47 | INFO | CatImageProcessor.py:74 | cv_corners saved: test_real_results\1_Cheetoh_cv_corners.png
+2025-12-21 20:36:09 | INFO | CatImageProcessor.py:74 | custom_corners saved: test_real_results\1_Cheetoh_custom_corners.png
+2025-12-21 20:36:09 | INFO | CatImageProcessor.py:91 | All images was saved for Cheetoh
+2025-12-21 20:36:09 | INFO | CatImageProcessor.py:19 | process_and_save executed in 31.333 sec.
+2025-12-21 20:37:27 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): api.thecatapi.com:443
+2025-12-21 20:37:27 | DEBUG | connectionpool.py:544 | https://api.thecatapi.com:443 "GET /v1/images/search?limit=1&has_breeds=1 HTTP/1.1" 200 None
+2025-12-21 20:37:27 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): cdn2.thecatapi.com:443
+2025-12-21 20:37:28 | DEBUG | connectionpool.py:544 | https://cdn2.thecatapi.com:443 "GET /images/wdT-_qOL3.jpg HTTP/1.1" 200 2420435
+2025-12-21 20:37:28 | INFO | CatImageProcessor.py:63 | fetched image Scottish Fold (https://cdn2.thecatapi.com/images/wdT-_qOL3.jpg)
+2025-12-21 20:37:28 | INFO | CatImageProcessor.py:19 | fetch_images executed in 1.402 sec.
+2025-12-21 20:37:28 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): api.thecatapi.com:443
+2025-12-21 20:37:29 | DEBUG | connectionpool.py:544 | https://api.thecatapi.com:443 "GET /v1/images/search?limit=1&has_breeds=1 HTTP/1.1" 200 None
+2025-12-21 20:37:29 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): cdn2.thecatapi.com:443
+2025-12-21 20:37:30 | DEBUG | connectionpool.py:544 | https://cdn2.thecatapi.com:443 "GET /images/bAiN3T-rs.jpg HTTP/1.1" 200 57103
+2025-12-21 20:37:30 | INFO | CatImageProcessor.py:63 | fetched image Cornish Rex (https://cdn2.thecatapi.com/images/bAiN3T-rs.jpg)
+2025-12-21 20:37:30 | INFO | CatImageProcessor.py:19 | fetch_images executed in 1.551 sec.
+2025-12-21 20:37:30 | INFO | CatImageProcessor.py:74 | original saved: test_real_results\1_Cornish_Rex_original.png
+2025-12-21 20:37:30 | INFO | CatImageProcessor.py:74 | cv_edges saved: test_real_results\1_Cornish_Rex_cv_edges.png
+2025-12-21 20:37:37 | INFO | CatImageProcessor.py:74 | custom_edges saved: test_real_results\1_Cornish_Rex_custom_edges.png
+2025-12-21 20:37:37 | INFO | CatImageProcessor.py:74 | cv_corners saved: test_real_results\1_Cornish_Rex_cv_corners.png
+2025-12-21 20:37:56 | INFO | CatImageProcessor.py:74 | custom_corners saved: test_real_results\1_Cornish_Rex_custom_corners.png
+2025-12-21 20:37:56 | INFO | CatImageProcessor.py:91 | All images was saved for Cornish Rex
+2025-12-21 20:37:56 | INFO | CatImageProcessor.py:19 | process_and_save executed in 26.001 sec.
+2025-12-21 20:40:43 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): api.thecatapi.com:443
+2025-12-21 20:40:44 | DEBUG | connectionpool.py:544 | https://api.thecatapi.com:443 "GET /v1/images/search?limit=1&has_breeds=1 HTTP/1.1" 200 None
+2025-12-21 20:40:44 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): cdn2.thecatapi.com:443
+2025-12-21 20:40:44 | DEBUG | connectionpool.py:544 | https://cdn2.thecatapi.com:443 "GET /images/WAwazYKhH.jpg HTTP/1.1" 200 688416
+2025-12-21 20:40:45 | INFO | CatImageProcessor.py:63 | fetched image Javanese (https://cdn2.thecatapi.com/images/WAwazYKhH.jpg)
+2025-12-21 20:40:45 | INFO | CatImageProcessor.py:19 | fetch_images executed in 1.846 sec.
+2025-12-21 20:40:45 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): api.thecatapi.com:443
+2025-12-21 20:40:45 | DEBUG | connectionpool.py:544 | https://api.thecatapi.com:443 "GET /v1/images/search?limit=1&has_breeds=1 HTTP/1.1" 200 None
+2025-12-21 20:40:45 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): cdn2.thecatapi.com:443
+2025-12-21 20:40:46 | DEBUG | connectionpool.py:544 | https://cdn2.thecatapi.com:443 "GET /images/BQMSld0A0.jpg HTTP/1.1" 200 70751
+2025-12-21 20:40:46 | INFO | CatImageProcessor.py:63 | fetched image Dragon Li (https://cdn2.thecatapi.com/images/BQMSld0A0.jpg)
+2025-12-21 20:40:46 | INFO | CatImageProcessor.py:19 | fetch_images executed in 1.094 sec.
+2025-12-21 20:40:46 | INFO | CatImageProcessor.py:74 | original saved: test_real_results\1_Dragon_Li_original.png
+2025-12-21 20:40:46 | INFO | CatImageProcessor.py:74 | cv_edges saved: test_real_results\1_Dragon_Li_cv_edges.png
+2025-12-21 21:08:15 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): api.thecatapi.com:443
+2025-12-21 21:08:16 | DEBUG | connectionpool.py:544 | https://api.thecatapi.com:443 "GET /v1/images/search?limit=2&has_breeds=1 HTTP/1.1" 200 None
+2025-12-21 21:08:16 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): cdn2.thecatapi.com:443
+2025-12-21 21:08:17 | DEBUG | connectionpool.py:544 | https://cdn2.thecatapi.com:443 "GET /images/ShbKwvcD_.jpg HTTP/1.1" 200 756675
+2025-12-21 21:08:17 | INFO | CatImageProcessor.py:63 | fetched image Scottish Fold (https://cdn2.thecatapi.com/images/ShbKwvcD_.jpg)
+2025-12-21 21:08:17 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): cdn2.thecatapi.com:443
+2025-12-21 21:08:18 | DEBUG | connectionpool.py:544 | https://cdn2.thecatapi.com:443 "GET /images/A2Wrn8uNj.jpg HTTP/1.1" 200 107133
+2025-12-21 21:08:18 | INFO | CatImageProcessor.py:63 | fetched image Siberian (https://cdn2.thecatapi.com/images/A2Wrn8uNj.jpg)
+2025-12-21 21:08:18 | INFO | CatImageProcessor.py:19 | fetch_images executed in 3.177 sec.
+2025-12-21 21:08:18 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): api.thecatapi.com:443
+2025-12-21 21:08:19 | DEBUG | connectionpool.py:544 | https://api.thecatapi.com:443 "GET /v1/images/search?limit=1&has_breeds=1 HTTP/1.1" 200 None
+2025-12-21 21:08:19 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): cdn2.thecatapi.com:443
+2025-12-21 21:08:19 | DEBUG | connectionpool.py:544 | https://cdn2.thecatapi.com:443 "GET /images/7-1CtKMRr.jpg HTTP/1.1" 200 1852550
+2025-12-21 21:08:20 | INFO | CatImageProcessor.py:63 | fetched image Australian Mist (https://cdn2.thecatapi.com/images/7-1CtKMRr.jpg)
+2025-12-21 21:08:20 | INFO | CatImageProcessor.py:19 | fetch_images executed in 1.413 sec.
+2025-12-21 21:08:20 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): api.thecatapi.com:443
+2025-12-21 21:08:20 | DEBUG | connectionpool.py:544 | https://api.thecatapi.com:443 "GET /v1/images/search?limit=1&has_breeds=1 HTTP/1.1" 200 None
+2025-12-21 21:08:20 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): cdn2.thecatapi.com:443
+2025-12-21 21:08:21 | DEBUG | connectionpool.py:544 | https://cdn2.thecatapi.com:443 "GET /images/daHxeTPgZ.jpg HTTP/1.1" 200 37033
+2025-12-21 21:08:21 | INFO | CatImageProcessor.py:63 | fetched image European Burmese (https://cdn2.thecatapi.com/images/daHxeTPgZ.jpg)
+2025-12-21 21:08:21 | INFO | CatImageProcessor.py:19 | fetch_images executed in 1.186 sec.
+2025-12-21 21:08:21 | INFO | CatImageProcessor.py:74 | original saved: test_real_results\1_European_Burmese_original.png
+2025-12-21 21:08:21 | INFO | CatImageProcessor.py:74 | cv_edges saved: test_real_results\1_European_Burmese_cv_edges.png
+2025-12-21 21:08:25 | INFO | CatImageProcessor.py:74 | custom_edges saved: test_real_results\1_European_Burmese_custom_edges.png
+2025-12-21 21:08:25 | INFO | CatImageProcessor.py:74 | cv_corners saved: test_real_results\1_European_Burmese_cv_corners.png
+2025-12-21 21:08:34 | INFO | CatImageProcessor.py:74 | custom_corners saved: test_real_results\1_European_Burmese_custom_corners.png
+2025-12-21 21:08:34 | INFO | CatImageProcessor.py:91 | All images was saved for European Burmese
+2025-12-21 21:08:34 | INFO | CatImageProcessor.py:19 | process_and_save executed in 13.208 sec.
+2025-12-21 21:30:10 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): api.thecatapi.com:443
+2025-12-21 21:30:10 | DEBUG | connectionpool.py:544 | https://api.thecatapi.com:443 "GET /v1/images/search?limit=2&has_breeds=1 HTTP/1.1" 200 None
+2025-12-21 21:30:10 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): cdn2.thecatapi.com:443
+2025-12-21 21:30:11 | DEBUG | connectionpool.py:544 | https://cdn2.thecatapi.com:443 "GET /images/djnExlK9y.jpg HTTP/1.1" 200 44670
+2025-12-21 21:30:11 | INFO | CatImageProcessor.py:63 | fetched image Cheetoh (https://cdn2.thecatapi.com/images/djnExlK9y.jpg)
+2025-12-21 21:30:11 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): cdn2.thecatapi.com:443
+2025-12-21 21:30:11 | DEBUG | connectionpool.py:544 | https://cdn2.thecatapi.com:443 "GET /images/cSzaNCgq2.jpg HTTP/1.1" 200 147863
+2025-12-21 21:30:11 | INFO | CatImageProcessor.py:63 | fetched image Turkish Angora (https://cdn2.thecatapi.com/images/cSzaNCgq2.jpg)
+2025-12-21 21:30:11 | INFO | CatImageProcessor.py:19 | fetch_images executed in 1.812 sec.
+2025-12-21 21:30:11 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): api.thecatapi.com:443
+2025-12-21 21:30:12 | DEBUG | connectionpool.py:544 | https://api.thecatapi.com:443 "GET /v1/images/search?limit=1&has_breeds=1 HTTP/1.1" 200 None
+2025-12-21 21:30:12 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): cdn2.thecatapi.com:443
+2025-12-21 21:30:12 | DEBUG | connectionpool.py:544 | https://cdn2.thecatapi.com:443 "GET /images/TzyZJUeIM.jpg HTTP/1.1" 200 145812
+2025-12-21 21:30:13 | INFO | CatImageProcessor.py:63 | fetched image Birman (https://cdn2.thecatapi.com/images/TzyZJUeIM.jpg)
+2025-12-21 21:30:13 | INFO | CatImageProcessor.py:19 | fetch_images executed in 1.192 sec.
+2025-12-21 21:30:13 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): api.thecatapi.com:443
+2025-12-21 22:06:02 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): api.thecatapi.com:443
+2025-12-21 22:06:03 | DEBUG | connectionpool.py:544 | https://api.thecatapi.com:443 "GET /v1/images/search?limit=2&has_breeds=1 HTTP/1.1" 200 None
+2025-12-21 22:06:03 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): cdn2.thecatapi.com:443
+2025-12-21 22:06:03 | DEBUG | connectionpool.py:544 | https://cdn2.thecatapi.com:443 "GET /images/wWZPyq5Jm.jpg HTTP/1.1" 200 126430
+2025-12-21 22:06:04 | INFO | CatImageProcessor.py:63 | fetched image Havana Brown (https://cdn2.thecatapi.com/images/wWZPyq5Jm.jpg)
+2025-12-21 22:06:04 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): cdn2.thecatapi.com:443
+2025-12-21 22:06:04 | DEBUG | connectionpool.py:544 | https://cdn2.thecatapi.com:443 "GET /images/KBjPMWOsK.jpg HTTP/1.1" 200 6470908
+2025-12-21 22:06:04 | INFO | CatImageProcessor.py:63 | fetched image Himalayan (https://cdn2.thecatapi.com/images/KBjPMWOsK.jpg)
+2025-12-21 22:06:04 | INFO | CatImageProcessor.py:19 | fetch_images executed in 2.656 sec.
+2025-12-21 22:06:04 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): api.thecatapi.com:443
+2025-12-21 22:06:05 | DEBUG | connectionpool.py:544 | https://api.thecatapi.com:443 "GET /v1/images/search?limit=1&has_breeds=1 HTTP/1.1" 200 None
+2025-12-21 22:06:05 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): cdn2.thecatapi.com:443
+2025-12-21 22:06:06 | DEBUG | connectionpool.py:544 | https://cdn2.thecatapi.com:443 "GET /images/_I6AsfuMg.png HTTP/1.1" 200 1630921
+2025-12-21 22:06:07 | INFO | CatImageProcessor.py:63 | fetched image Cornish Rex (https://cdn2.thecatapi.com/images/_I6AsfuMg.png)
+2025-12-21 22:06:07 | INFO | CatImageProcessor.py:19 | fetch_images executed in 2.352 sec.
+2025-12-21 22:06:07 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): api.thecatapi.com:443
+2025-12-21 22:06:07 | DEBUG | connectionpool.py:544 | https://api.thecatapi.com:443 "GET /v1/images/search?limit=1&has_breeds=1 HTTP/1.1" 200 None
+2025-12-21 22:06:07 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): cdn2.thecatapi.com:443
+2025-12-21 22:06:08 | DEBUG | connectionpool.py:544 | https://cdn2.thecatapi.com:443 "GET /images/ajWdNxBwN.jpg HTTP/1.1" 200 85030
+2025-12-21 22:06:08 | INFO | CatImageProcessor.py:63 | fetched image Himalayan (https://cdn2.thecatapi.com/images/ajWdNxBwN.jpg)
+2025-12-21 22:06:08 | INFO | CatImageProcessor.py:19 | fetch_images executed in 0.988 sec.
+2025-12-21 22:06:08 | INFO | CatImageProcessor.py:74 | original saved: test_real_results\1_Himalayan_original.png
+2025-12-21 22:06:08 | INFO | CatImageProcessor.py:74 | cv_edges saved: test_real_results\1_Himalayan_cv_edges.png
+2025-12-21 22:06:16 | INFO | CatImageProcessor.py:74 | custom_edges saved: test_real_results\1_Himalayan_custom_edges.png
+2025-12-21 22:06:16 | INFO | CatImageProcessor.py:74 | cv_corners saved: test_real_results\1_Himalayan_cv_corners.png
+2025-12-21 22:06:37 | INFO | CatImageProcessor.py:74 | custom_corners saved: test_real_results\1_Himalayan_custom_corners.png
+2025-12-21 22:06:37 | INFO | CatImageProcessor.py:91 | All images was saved for Himalayan
+2025-12-21 22:06:37 | INFO | CatImageProcessor.py:19 | process_and_save executed in 28.895 sec.
+2025-12-21 22:09:55 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): api.thecatapi.com:443
+2025-12-21 22:09:56 | DEBUG | connectionpool.py:544 | https://api.thecatapi.com:443 "GET /v1/images/search?limit=2&has_breeds=1 HTTP/1.1" 200 None
+2025-12-21 22:09:56 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): cdn2.thecatapi.com:443
+2025-12-21 22:09:56 | DEBUG | connectionpool.py:544 | https://cdn2.thecatapi.com:443 "GET /images/ixXGyLmIW.jpg HTTP/1.1" 200 584588
+2025-12-21 22:09:56 | INFO | CatImageProcessor.py:63 | fetched image Exotic Shorthair (https://cdn2.thecatapi.com/images/ixXGyLmIW.jpg)
+2025-12-21 22:09:56 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): cdn2.thecatapi.com:443
+2025-12-21 22:09:57 | DEBUG | connectionpool.py:544 | https://cdn2.thecatapi.com:443 "GET /images/PKblw2RPe.jpg HTTP/1.1" 200 117149
+2025-12-21 22:09:57 | INFO | CatImageProcessor.py:63 | fetched image Maine Coon (https://cdn2.thecatapi.com/images/PKblw2RPe.jpg)
+2025-12-21 22:09:57 | INFO | CatImageProcessor.py:19 | fetch_images executed in 1.880 sec.
+2025-12-21 22:09:57 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): api.thecatapi.com:443
+2025-12-21 22:09:57 | DEBUG | connectionpool.py:544 | https://api.thecatapi.com:443 "GET /v1/images/search?limit=1&has_breeds=1 HTTP/1.1" 200 None
+2025-12-21 22:09:57 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): cdn2.thecatapi.com:443
+2025-12-21 22:09:58 | DEBUG | connectionpool.py:544 | https://cdn2.thecatapi.com:443 "GET /images/9x1zk_Qdr.jpg HTTP/1.1" 200 217589
+2025-12-21 22:09:58 | INFO | CatImageProcessor.py:63 | fetched image Abyssinian (https://cdn2.thecatapi.com/images/9x1zk_Qdr.jpg)
+2025-12-21 22:09:58 | INFO | CatImageProcessor.py:19 | fetch_images executed in 1.589 sec.
+2025-12-21 22:09:58 | DEBUG | connectionpool.py:1049 | Starting new HTTPS connection (1): api.thecatapi.com:443

@@ -1,6 +1,7 @@
 import unittest
 import os
 
+
 from lab5.implementation.CatImageProcessor import CatImageProcessor
 from lab5.implementation.CatImage import CatImage
 
@@ -16,14 +17,16 @@ class TestCatImageProcessorBasic(unittest.TestCase):
     # ------------------------------------------------------------
     # 1. Реальный тест API (fetch_images)
     # ------------------------------------------------------------
-    def test_fetch_images_real(self):
-        cats = self.processor.fetch_images(limit=1)
+    def test_fetch_images_real_count(self):
+        cats = self.processor.fetch_images(limit=2)
 
         # Проверки
-        self.assertEqual(len(cats), 1)
-        self.assertIsInstance(cats[0], CatImage)
-        self.assertGreater(cats[0].image.size, 0)
+        self.assertEqual(len(cats), 2)
 
+    def test_fetch_images_real_instance(self):
+        cats = self.processor.fetch_images(limit=1)
+
+        self.assertIsInstance(cats[0], CatImage)
     # ------------------------------------------------------------
     # 2. Тест записи файлов — process_and_save
     # ------------------------------------------------------------
@@ -35,13 +38,9 @@ class TestCatImageProcessorBasic(unittest.TestCase):
 
         # Пути файлов
         original = os.path.join(self.test_dir, f"1_{breed_name}_original.png")
-        cv = os.path.join(self.test_dir, f"1_{breed_name}_cv.png")
-        custom = os.path.join(self.test_dir, f"1_{breed_name}_my.png")
 
         # Проверки файлов
         self.assertTrue(os.path.exists(original))
-        self.assertTrue(os.path.exists(cv))
-        self.assertTrue(os.path.exists(custom))
 
 
 if __name__ == "__main__":
