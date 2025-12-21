@@ -1,0 +1,853 @@
+2025-12-13 18:18:06 | DEBUG | proactor_events.py:624 | Using proactor: IocpProactor
+2025-12-13 18:18:06 | INFO | PiplineQ.py:176 | 🚀 Starting pipeline...
+2025-12-13 18:18:06 | DEBUG | PiplineQ.py:179 | [Pipeline] Limit=3, download_workers=3, conv_workers=6, save_workers=4
+2025-12-13 18:18:06 | INFO | PiplineQ.py:68 | ⬇️ Fetching image URLs...
+2025-12-13 18:18:07 | DEBUG | PiplineQ.py:77 | [Fetcher] Received 3 items from API
+2025-12-13 18:18:07 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=1, breed=Oriental, url=https://cdn2.thecatapi.com/images/IOetZNghN.jpg
+2025-12-13 18:18:07 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=2, breed=Siberian, url=https://cdn2.thecatapi.com/images/gZiG70w_u.jpg
+2025-12-13 18:18:07 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=3, breed=Siberian, url=https://cdn2.thecatapi.com/images/QAWwhRFCG.jpg
+2025-12-13 18:18:07 | DEBUG | PiplineQ.py:93 | [Downloader 0] Queue size before get: 5
+2025-12-13 18:18:07 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 0] Downloading image 1: Oriental
+2025-12-13 18:18:07 | DEBUG | PiplineQ.py:93 | [Downloader 1] Queue size before get: 4
+2025-12-13 18:18:07 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 1] Downloading image 2: Siberian
+2025-12-13 18:18:07 | DEBUG | PiplineQ.py:93 | [Downloader 2] Queue size before get: 3
+2025-12-13 18:18:07 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 2] Downloading image 3: Siberian
+2025-12-13 18:18:08 | DEBUG | PiplineQ.py:105 | [Downloader 1] Downloaded 92255 bytes for idx=2
+2025-12-13 18:18:08 | DEBUG | PiplineQ.py:109 | [Downloader 1] Image shape after decode: (937, 750, 3)
+2025-12-13 18:18:08 | DEBUG | PiplineQ.py:93 | [Downloader 1] Queue size before get: 2
+2025-12-13 18:18:08 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 2
+2025-12-13 18:18:08 | DEBUG | PiplineQ.py:125 | [Processor 0] Queue size before get: 0
+2025-12-13 18:18:08 | INFO | PiplineQ.py:133 | ⚙️ [Processor 0] Processing image 2
+2025-12-13 18:18:08 | DEBUG | PiplineQ.py:134 | [Processor 0] Image shape: (937, 750, 3)
+2025-12-13 18:18:08 | INFO | PiplineQ.py:115 | ✅ [Downloader 1] Processed 1 images
+2025-12-13 18:18:08 | DEBUG | PiplineQ.py:105 | [Downloader 0] Downloaded 461791 bytes for idx=1
+2025-12-13 18:18:08 | DEBUG | PiplineQ.py:109 | [Downloader 0] Image shape after decode: (1587, 2348, 3)
+2025-12-13 18:18:08 | DEBUG | PiplineQ.py:93 | [Downloader 0] Queue size before get: 1
+2025-12-13 18:18:08 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 1
+2025-12-13 18:18:08 | DEBUG | PiplineQ.py:125 | [Processor 1] Queue size before get: 0
+2025-12-13 18:18:08 | INFO | PiplineQ.py:133 | ⚙️ [Processor 1] Processing image 1
+2025-12-13 18:18:08 | DEBUG | PiplineQ.py:134 | [Processor 1] Image shape: (1587, 2348, 3)
+2025-12-13 18:18:08 | INFO | PiplineQ.py:115 | ✅ [Downloader 0] Processed 1 images
+2025-12-13 18:18:08 | DEBUG | PiplineQ.py:105 | [Downloader 2] Downloaded 75454 bytes for idx=3
+2025-12-13 18:18:08 | DEBUG | PiplineQ.py:109 | [Downloader 2] Image shape after decode: (675, 900, 3)
+2025-12-13 18:18:08 | DEBUG | PiplineQ.py:93 | [Downloader 2] Queue size before get: 0
+2025-12-13 18:18:08 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 0
+2025-12-13 18:18:08 | DEBUG | PiplineQ.py:125 | [Processor 2] Queue size before get: 6
+2025-12-13 18:18:08 | INFO | PiplineQ.py:133 | ⚙️ [Processor 2] Processing image 3
+2025-12-13 18:18:08 | DEBUG | PiplineQ.py:134 | [Processor 2] Image shape: (675, 900, 3)
+2025-12-13 18:18:08 | DEBUG | PiplineQ.py:125 | [Processor 3] Queue size before get: 5
+2025-12-13 18:18:08 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 5
+2025-12-13 18:18:08 | INFO | PiplineQ.py:144 | ✅ [Processor 3] Processed 0 images
+2025-12-13 18:18:08 | DEBUG | PiplineQ.py:125 | [Processor 4] Queue size before get: 4
+2025-12-13 18:18:08 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 4
+2025-12-13 18:18:08 | INFO | PiplineQ.py:144 | ✅ [Processor 4] Processed 0 images
+2025-12-13 18:18:08 | DEBUG | PiplineQ.py:125 | [Processor 5] Queue size before get: 3
+2025-12-13 18:18:08 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 3
+2025-12-13 18:18:08 | INFO | PiplineQ.py:144 | ✅ [Processor 5] Processed 0 images
+2025-12-13 18:18:08 | INFO | PiplineQ.py:115 | ✅ [Downloader 2] Processed 1 images
+2025-12-13 18:18:08 | DEBUG | PiplineQ.py:201 | [Pipeline] Download results: [1, 1, 1]
+2025-12-13 18:18:09 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=2, breed=Siberian, image shape=(937, 750, 3)
+2025-12-13 18:18:09 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=1, breed=Oriental, image shape=(1587, 2348, 3)
+2025-12-13 18:18:09 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=3, breed=Siberian, image shape=(675, 900, 3)
+2025-12-13 18:18:16 | DEBUG | PiplineQ.py:36 | [ConvolutionWorker] Finished processing idx=3
+2025-12-13 18:18:17 | DEBUG | PiplineQ.py:125 | [Processor 2] Queue size before get: 2
+2025-12-13 18:18:17 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 2
+2025-12-13 18:18:17 | INFO | PiplineQ.py:144 | ✅ [Processor 2] Processed 1 images
+2025-12-13 18:18:17 | DEBUG | PiplineQ.py:161 | [Saver] Saving original image for idx=3, shape=(675, 900, 3)
+2025-12-13 18:18:17 | INFO | PiplineQ.py:167 | 💾 Saved: 3_Siberian_original.png
+2025-12-13 18:18:17 | DEBUG | PiplineQ.py:161 | [Saver] Saving cv_edges image for idx=3, shape=(675, 900)
+2025-12-13 18:18:17 | INFO | PiplineQ.py:167 | 💾 Saved: 3_Siberian_cv_edges.png
+2025-12-13 18:18:17 | DEBUG | PiplineQ.py:161 | [Saver] Saving my_edges image for idx=3, shape=(675, 900)
+2025-12-13 18:18:17 | INFO | PiplineQ.py:167 | 💾 Saved: 3_Siberian_my_edges.png
+2025-12-13 18:18:17 | DEBUG | PiplineQ.py:36 | [ConvolutionWorker] Finished processing idx=2
+2025-12-13 18:18:17 | DEBUG | PiplineQ.py:125 | [Processor 0] Queue size before get: 1
+2025-12-13 18:18:17 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 1
+2025-12-13 18:18:17 | INFO | PiplineQ.py:144 | ✅ [Processor 0] Processed 1 images
+2025-12-13 18:18:17 | DEBUG | PiplineQ.py:161 | [Saver] Saving original image for idx=2, shape=(937, 750, 3)
+2025-12-13 18:18:17 | INFO | PiplineQ.py:167 | 💾 Saved: 2_Siberian_original.png
+2025-12-13 18:18:17 | DEBUG | PiplineQ.py:161 | [Saver] Saving cv_edges image for idx=2, shape=(937, 750)
+2025-12-13 18:18:17 | INFO | PiplineQ.py:167 | 💾 Saved: 2_Siberian_cv_edges.png
+2025-12-13 18:18:17 | DEBUG | PiplineQ.py:161 | [Saver] Saving my_edges image for idx=2, shape=(937, 750)
+2025-12-13 18:18:17 | INFO | PiplineQ.py:167 | 💾 Saved: 2_Siberian_my_edges.png
+2025-12-13 18:18:46 | DEBUG | PiplineQ.py:36 | [ConvolutionWorker] Finished processing idx=1
+2025-12-13 18:18:46 | DEBUG | PiplineQ.py:125 | [Processor 1] Queue size before get: 0
+2025-12-13 18:18:46 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 0
+2025-12-13 18:18:46 | INFO | PiplineQ.py:144 | ✅ [Processor 1] Processed 1 images
+2025-12-13 18:18:46 | DEBUG | PiplineQ.py:161 | [Saver] Saving original image for idx=1, shape=(1587, 2348, 3)
+2025-12-13 18:18:46 | INFO | PiplineQ.py:171 | ✅ [Saver] Saved 0 images total
+2025-12-13 18:18:46 | DEBUG | PiplineQ.py:204 | [Pipeline] Convolution results: [1, 1, 1, 0, 0, 0]
+2025-12-13 18:18:46 | INFO | PiplineQ.py:171 | ✅ [Saver] Saved 3 images total
+2025-12-13 18:18:46 | INFO | PiplineQ.py:171 | ✅ [Saver] Saved 3 images total
+2025-12-13 18:18:46 | INFO | PiplineQ.py:167 | 💾 Saved: 1_Oriental_original.png
+2025-12-13 18:18:46 | DEBUG | PiplineQ.py:161 | [Saver] Saving cv_edges image for idx=1, shape=(1587, 2348)
+2025-12-13 18:18:46 | INFO | PiplineQ.py:167 | 💾 Saved: 1_Oriental_cv_edges.png
+2025-12-13 18:18:46 | DEBUG | PiplineQ.py:161 | [Saver] Saving my_edges image for idx=1, shape=(1587, 2348)
+2025-12-13 18:18:46 | INFO | PiplineQ.py:167 | 💾 Saved: 1_Oriental_my_edges.png
+2025-12-13 18:18:46 | INFO | PiplineQ.py:171 | ✅ [Saver] Saved 3 images total
+2025-12-13 18:18:46 | DEBUG | PiplineQ.py:209 | [Pipeline] Save results: [3, 3, 3, 0]
+2025-12-13 18:18:46 | INFO | PiplineQ.py:217 | ============================================================
+2025-12-13 18:18:46 | INFO | PiplineQ.py:218 | 📊 PIPELINE STATISTICS:
+2025-12-13 18:18:46 | INFO | PiplineQ.py:219 |    Total downloaded: 3
+2025-12-13 18:18:46 | INFO | PiplineQ.py:220 |    Total processed: 3
+2025-12-13 18:18:46 | INFO | PiplineQ.py:221 |    Total saved: [3, 3, 3, 0]
+2025-12-13 18:18:46 | INFO | PiplineQ.py:222 |    Total time: 40.83 seconds
+2025-12-13 18:18:46 | INFO | PiplineQ.py:223 | 🎉 Pipeline completed successfully!
+2025-12-21 19:09:53 | DEBUG | proactor_events.py:629 | Using proactor: IocpProactor
+2025-12-21 19:09:53 | INFO | PiplineQ.py:176 | 🚀 Starting pipeline...
+2025-12-21 19:09:53 | DEBUG | PiplineQ.py:179 | [Pipeline] Limit=3, download_workers=3, conv_workers=6, save_workers=4
+2025-12-21 19:09:53 | INFO | PiplineQ.py:68 | ⬇️ Fetching image URLs...
+2025-12-21 19:09:54 | DEBUG | PiplineQ.py:77 | [Fetcher] Received 3 items from API
+2025-12-21 19:09:54 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=1, breed=American Wirehair, url=https://cdn2.thecatapi.com/images/Q6TDnfM_O.jpg
+2025-12-21 19:09:54 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=2, breed=British Shorthair, url=https://cdn2.thecatapi.com/images/GrPErz7EA.jpg
+2025-12-21 19:09:54 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=3, breed=Exotic Shorthair, url=https://cdn2.thecatapi.com/images/zJkeHza2K.jpg
+2025-12-21 19:09:54 | DEBUG | PiplineQ.py:93 | [Downloader 0] Queue size before get: 5
+2025-12-21 19:09:54 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 0] Downloading image 1: American Wirehair
+2025-12-21 19:09:54 | DEBUG | PiplineQ.py:93 | [Downloader 1] Queue size before get: 4
+2025-12-21 19:09:54 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 1] Downloading image 2: British Shorthair
+2025-12-21 19:09:54 | DEBUG | PiplineQ.py:93 | [Downloader 2] Queue size before get: 3
+2025-12-21 19:09:54 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 2] Downloading image 3: Exotic Shorthair
+2025-12-21 19:09:55 | DEBUG | PiplineQ.py:105 | [Downloader 1] Downloaded 73952 bytes for idx=2
+2025-12-21 19:09:55 | DEBUG | PiplineQ.py:109 | [Downloader 1] Image shape after decode: (1024, 1024, 3)
+2025-12-21 19:09:55 | DEBUG | PiplineQ.py:93 | [Downloader 1] Queue size before get: 2
+2025-12-21 19:09:55 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 2
+2025-12-21 19:09:55 | DEBUG | PiplineQ.py:125 | [Processor 0] Queue size before get: 0
+2025-12-21 19:09:55 | INFO | PiplineQ.py:133 | ⚙️ [Processor 0] Processing image 2
+2025-12-21 19:09:55 | DEBUG | PiplineQ.py:134 | [Processor 0] Image shape: (1024, 1024, 3)
+2025-12-21 19:09:55 | DEBUG | PiplineQ.py:105 | [Downloader 0] Downloaded 163657 bytes for idx=1
+2025-12-21 19:09:55 | DEBUG | PiplineQ.py:109 | [Downloader 0] Image shape after decode: (1000, 1600, 3)
+2025-12-21 19:09:55 | DEBUG | PiplineQ.py:93 | [Downloader 0] Queue size before get: 1
+2025-12-21 19:09:55 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 1
+2025-12-21 19:09:55 | INFO | PiplineQ.py:115 | ✅ [Downloader 1] Processed 1 images
+2025-12-21 19:09:55 | DEBUG | PiplineQ.py:125 | [Processor 1] Queue size before get: 0
+2025-12-21 19:09:55 | INFO | PiplineQ.py:133 | ⚙️ [Processor 1] Processing image 1
+2025-12-21 19:09:55 | DEBUG | PiplineQ.py:134 | [Processor 1] Image shape: (1000, 1600, 3)
+2025-12-21 19:09:55 | INFO | PiplineQ.py:115 | ✅ [Downloader 0] Processed 1 images
+2025-12-21 19:09:55 | DEBUG | PiplineQ.py:105 | [Downloader 2] Downloaded 269498 bytes for idx=3
+2025-12-21 19:09:55 | DEBUG | PiplineQ.py:109 | [Downloader 2] Image shape after decode: (1511, 2048, 3)
+2025-12-21 19:09:55 | DEBUG | PiplineQ.py:93 | [Downloader 2] Queue size before get: 0
+2025-12-21 19:09:55 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 0
+2025-12-21 19:09:55 | DEBUG | PiplineQ.py:125 | [Processor 2] Queue size before get: 6
+2025-12-21 19:09:55 | INFO | PiplineQ.py:133 | ⚙️ [Processor 2] Processing image 3
+2025-12-21 19:09:55 | DEBUG | PiplineQ.py:134 | [Processor 2] Image shape: (1511, 2048, 3)
+2025-12-21 19:09:55 | DEBUG | PiplineQ.py:125 | [Processor 3] Queue size before get: 5
+2025-12-21 19:09:55 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 5
+2025-12-21 19:09:55 | INFO | PiplineQ.py:144 | ✅ [Processor 3] Processed 0 images
+2025-12-21 19:09:55 | DEBUG | PiplineQ.py:125 | [Processor 4] Queue size before get: 4
+2025-12-21 19:09:55 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 4
+2025-12-21 19:09:55 | INFO | PiplineQ.py:144 | ✅ [Processor 4] Processed 0 images
+2025-12-21 19:09:55 | DEBUG | PiplineQ.py:125 | [Processor 5] Queue size before get: 3
+2025-12-21 19:09:55 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 3
+2025-12-21 19:09:55 | INFO | PiplineQ.py:144 | ✅ [Processor 5] Processed 0 images
+2025-12-21 19:09:55 | INFO | PiplineQ.py:115 | ✅ [Downloader 2] Processed 1 images
+2025-12-21 19:09:55 | DEBUG | PiplineQ.py:201 | [Pipeline] Download results: [1, 1, 1]
+2025-12-21 19:09:55 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=2, breed=British Shorthair, image shape=(1024, 1024, 3)
+2025-12-21 19:09:55 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=1, breed=American Wirehair, image shape=(1000, 1600, 3)
+2025-12-21 19:09:56 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=3, breed=Exotic Shorthair, image shape=(1511, 2048, 3)
+2025-12-21 19:10:06 | DEBUG | PiplineQ.py:36 | [ConvolutionWorker] Finished processing idx=2
+2025-12-21 19:10:06 | DEBUG | PiplineQ.py:125 | [Processor 0] Queue size before get: 2
+2025-12-21 19:10:06 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 2
+2025-12-21 19:10:06 | INFO | PiplineQ.py:144 | ✅ [Processor 0] Processed 1 images
+2025-12-21 19:10:06 | DEBUG | PiplineQ.py:161 | [Saver] Saving original image for idx=2, shape=(1024, 1024, 3)
+2025-12-21 19:10:06 | INFO | PiplineQ.py:167 | 💾 Saved: 2_British_Shorthair_original.png
+2025-12-21 19:10:06 | DEBUG | PiplineQ.py:161 | [Saver] Saving cv_edges image for idx=2, shape=(1024, 1024)
+2025-12-21 19:10:06 | INFO | PiplineQ.py:167 | 💾 Saved: 2_British_Shorthair_cv_edges.png
+2025-12-21 19:10:06 | DEBUG | PiplineQ.py:161 | [Saver] Saving my_edges image for idx=2, shape=(1024, 1024)
+2025-12-21 19:10:06 | INFO | PiplineQ.py:167 | 💾 Saved: 2_British_Shorthair_my_edges.png
+2025-12-21 19:10:12 | DEBUG | PiplineQ.py:36 | [ConvolutionWorker] Finished processing idx=1
+2025-12-21 19:10:12 | DEBUG | PiplineQ.py:125 | [Processor 1] Queue size before get: 1
+2025-12-21 19:10:12 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 1
+2025-12-21 19:10:12 | INFO | PiplineQ.py:144 | ✅ [Processor 1] Processed 1 images
+2025-12-21 19:10:12 | DEBUG | PiplineQ.py:161 | [Saver] Saving original image for idx=1, shape=(1000, 1600, 3)
+2025-12-21 19:10:12 | INFO | PiplineQ.py:167 | 💾 Saved: 1_American_Wirehair_original.png
+2025-12-21 19:10:12 | DEBUG | PiplineQ.py:161 | [Saver] Saving cv_edges image for idx=1, shape=(1000, 1600)
+2025-12-21 19:10:12 | INFO | PiplineQ.py:167 | 💾 Saved: 1_American_Wirehair_cv_edges.png
+2025-12-21 19:10:12 | DEBUG | PiplineQ.py:161 | [Saver] Saving my_edges image for idx=1, shape=(1000, 1600)
+2025-12-21 19:10:12 | INFO | PiplineQ.py:167 | 💾 Saved: 1_American_Wirehair_my_edges.png
+2025-12-21 19:10:35 | DEBUG | PiplineQ.py:36 | [ConvolutionWorker] Finished processing idx=3
+2025-12-21 19:10:35 | DEBUG | PiplineQ.py:125 | [Processor 2] Queue size before get: 0
+2025-12-21 19:10:35 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 0
+2025-12-21 19:10:35 | INFO | PiplineQ.py:144 | ✅ [Processor 2] Processed 1 images
+2025-12-21 19:10:35 | DEBUG | PiplineQ.py:161 | [Saver] Saving original image for idx=3, shape=(1511, 2048, 3)
+2025-12-21 19:10:35 | INFO | PiplineQ.py:171 | ✅ [Saver] Saved 0 images total
+2025-12-21 19:10:35 | DEBUG | PiplineQ.py:204 | [Pipeline] Convolution results: [1, 1, 1, 0, 0, 0]
+2025-12-21 19:10:35 | INFO | PiplineQ.py:171 | ✅ [Saver] Saved 3 images total
+2025-12-21 19:10:35 | INFO | PiplineQ.py:171 | ✅ [Saver] Saved 3 images total
+2025-12-21 19:10:35 | INFO | PiplineQ.py:167 | 💾 Saved: 3_Exotic_Shorthair_original.png
+2025-12-21 19:10:35 | DEBUG | PiplineQ.py:161 | [Saver] Saving cv_edges image for idx=3, shape=(1511, 2048)
+2025-12-21 19:10:35 | INFO | PiplineQ.py:167 | 💾 Saved: 3_Exotic_Shorthair_cv_edges.png
+2025-12-21 19:10:35 | DEBUG | PiplineQ.py:161 | [Saver] Saving my_edges image for idx=3, shape=(1511, 2048)
+2025-12-21 19:10:35 | INFO | PiplineQ.py:167 | 💾 Saved: 3_Exotic_Shorthair_my_edges.png
+2025-12-21 19:10:35 | INFO | PiplineQ.py:171 | ✅ [Saver] Saved 3 images total
+2025-12-21 19:10:35 | DEBUG | PiplineQ.py:209 | [Pipeline] Save results: [3, 3, 3, 0]
+2025-12-21 19:10:35 | INFO | PiplineQ.py:217 | ============================================================
+2025-12-21 19:10:35 | INFO | PiplineQ.py:218 | 📊 PIPELINE STATISTICS:
+2025-12-21 19:10:35 | INFO | PiplineQ.py:219 |    Total downloaded: 3
+2025-12-21 19:10:35 | INFO | PiplineQ.py:220 |    Total processed: 3
+2025-12-21 19:10:35 | INFO | PiplineQ.py:221 |    Total saved: [3, 3, 3, 0]
+2025-12-21 19:10:35 | INFO | PiplineQ.py:222 |    Total time: 41.74 seconds
+2025-12-21 19:10:35 | INFO | PiplineQ.py:223 | 🎉 Pipeline completed successfully!
+2025-12-21 20:24:19 | DEBUG | proactor_events.py:629 | Using proactor: IocpProactor
+2025-12-21 20:24:19 | INFO | PiplineQ.py:176 | 🚀 Starting pipeline...
+2025-12-21 20:24:19 | DEBUG | PiplineQ.py:179 | [Pipeline] Limit=3, download_workers=3, conv_workers=6, save_workers=4
+2025-12-21 20:24:19 | INFO | PiplineQ.py:68 | ⬇️ Fetching image URLs...
+2025-12-21 20:24:20 | DEBUG | PiplineQ.py:77 | [Fetcher] Received 3 items from API
+2025-12-21 20:24:20 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=1, breed=Ragamuffin, url=https://cdn2.thecatapi.com/images/jI2dXfp26.png
+2025-12-21 20:24:20 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=2, breed=Savannah, url=https://cdn2.thecatapi.com/images/ctHlkAH3L.jpg
+2025-12-21 20:24:20 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=3, breed=Toyger, url=https://cdn2.thecatapi.com/images/zfVWBciUH.jpg
+2025-12-21 20:24:20 | DEBUG | PiplineQ.py:93 | [Downloader 0] Queue size before get: 5
+2025-12-21 20:24:20 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 0] Downloading image 1: Ragamuffin
+2025-12-21 20:24:20 | DEBUG | PiplineQ.py:93 | [Downloader 1] Queue size before get: 4
+2025-12-21 20:24:20 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 1] Downloading image 2: Savannah
+2025-12-21 20:24:20 | DEBUG | PiplineQ.py:93 | [Downloader 2] Queue size before get: 3
+2025-12-21 20:24:20 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 2] Downloading image 3: Toyger
+2025-12-21 20:24:21 | DEBUG | PiplineQ.py:105 | [Downloader 1] Downloaded 84160 bytes for idx=2
+2025-12-21 20:24:21 | DEBUG | PiplineQ.py:109 | [Downloader 1] Image shape after decode: (1350, 1080, 3)
+2025-12-21 20:24:21 | DEBUG | PiplineQ.py:93 | [Downloader 1] Queue size before get: 2
+2025-12-21 20:24:21 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 2
+2025-12-21 20:24:21 | DEBUG | PiplineQ.py:125 | [Processor 0] Queue size before get: 0
+2025-12-21 20:24:21 | INFO | PiplineQ.py:133 | ⚙️ [Processor 0] Processing image 2
+2025-12-21 20:24:21 | DEBUG | PiplineQ.py:134 | [Processor 0] Image shape: (1350, 1080, 3)
+2025-12-21 20:24:21 | INFO | PiplineQ.py:115 | ✅ [Downloader 1] Processed 1 images
+2025-12-21 20:24:21 | DEBUG | PiplineQ.py:105 | [Downloader 2] Downloaded 83141 bytes for idx=3
+2025-12-21 20:24:21 | DEBUG | PiplineQ.py:109 | [Downloader 2] Image shape after decode: (1440, 1440, 3)
+2025-12-21 20:24:21 | DEBUG | PiplineQ.py:93 | [Downloader 2] Queue size before get: 1
+2025-12-21 20:24:21 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 1
+2025-12-21 20:24:21 | DEBUG | PiplineQ.py:125 | [Processor 1] Queue size before get: 0
+2025-12-21 20:24:21 | INFO | PiplineQ.py:133 | ⚙️ [Processor 1] Processing image 3
+2025-12-21 20:24:21 | DEBUG | PiplineQ.py:134 | [Processor 1] Image shape: (1440, 1440, 3)
+2025-12-21 20:24:21 | INFO | PiplineQ.py:115 | ✅ [Downloader 2] Processed 1 images
+2025-12-21 20:24:21 | DEBUG | PiplineQ.py:105 | [Downloader 0] Downloaded 1216590 bytes for idx=1
+2025-12-21 20:24:21 | DEBUG | PiplineQ.py:109 | [Downloader 0] Image shape after decode: (630, 1259, 4)
+2025-12-21 20:24:21 | DEBUG | PiplineQ.py:93 | [Downloader 0] Queue size before get: 0
+2025-12-21 20:24:21 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 0
+2025-12-21 20:24:21 | DEBUG | PiplineQ.py:125 | [Processor 2] Queue size before get: 6
+2025-12-21 20:24:21 | INFO | PiplineQ.py:133 | ⚙️ [Processor 2] Processing image 1
+2025-12-21 20:24:21 | DEBUG | PiplineQ.py:134 | [Processor 2] Image shape: (630, 1259, 4)
+2025-12-21 20:24:21 | DEBUG | PiplineQ.py:125 | [Processor 3] Queue size before get: 5
+2025-12-21 20:24:21 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 5
+2025-12-21 20:24:21 | INFO | PiplineQ.py:144 | ✅ [Processor 3] Processed 0 images
+2025-12-21 20:24:21 | DEBUG | PiplineQ.py:125 | [Processor 4] Queue size before get: 4
+2025-12-21 20:24:21 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 4
+2025-12-21 20:24:21 | INFO | PiplineQ.py:144 | ✅ [Processor 4] Processed 0 images
+2025-12-21 20:24:21 | DEBUG | PiplineQ.py:125 | [Processor 5] Queue size before get: 3
+2025-12-21 20:24:21 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 3
+2025-12-21 20:24:21 | INFO | PiplineQ.py:144 | ✅ [Processor 5] Processed 0 images
+2025-12-21 20:24:21 | INFO | PiplineQ.py:115 | ✅ [Downloader 0] Processed 1 images
+2025-12-21 20:24:21 | DEBUG | PiplineQ.py:201 | [Pipeline] Download results: [1, 1, 1]
+2025-12-21 20:24:21 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=2, breed=Savannah, image shape=(1350, 1080, 3)
+2025-12-21 20:24:21 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=3, breed=Toyger, image shape=(1440, 1440, 3)
+2025-12-21 20:24:21 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=1, breed=Ragamuffin, image shape=(630, 1259, 4)
+2025-12-21 20:25:23 | DEBUG | proactor_events.py:629 | Using proactor: IocpProactor
+2025-12-21 20:25:23 | INFO | PiplineQ.py:176 | 🚀 Starting pipeline...
+2025-12-21 20:25:23 | DEBUG | PiplineQ.py:179 | [Pipeline] Limit=3, download_workers=3, conv_workers=6, save_workers=4
+2025-12-21 20:25:23 | INFO | PiplineQ.py:68 | ⬇️ Fetching image URLs...
+2025-12-21 20:25:23 | DEBUG | PiplineQ.py:77 | [Fetcher] Received 3 items from API
+2025-12-21 20:25:23 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=1, breed=Himalayan, url=https://cdn2.thecatapi.com/images/me56sI74P.jpg
+2025-12-21 20:25:23 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=2, breed=Singapura, url=https://cdn2.thecatapi.com/images/GOvziuOyw.jpg
+2025-12-21 20:25:23 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=3, breed=Snowshoe, url=https://cdn2.thecatapi.com/images/S1CN1w6Bt.jpg
+2025-12-21 20:25:23 | DEBUG | PiplineQ.py:93 | [Downloader 0] Queue size before get: 5
+2025-12-21 20:25:23 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 0] Downloading image 1: Himalayan
+2025-12-21 20:25:23 | DEBUG | PiplineQ.py:93 | [Downloader 1] Queue size before get: 4
+2025-12-21 20:25:23 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 1] Downloading image 2: Singapura
+2025-12-21 20:25:23 | DEBUG | PiplineQ.py:93 | [Downloader 2] Queue size before get: 3
+2025-12-21 20:25:23 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 2] Downloading image 3: Snowshoe
+2025-12-21 20:25:24 | DEBUG | PiplineQ.py:105 | [Downloader 2] Downloaded 359333 bytes for idx=3
+2025-12-21 20:25:24 | DEBUG | PiplineQ.py:109 | [Downloader 2] Image shape after decode: (2327, 1741, 3)
+2025-12-21 20:25:24 | DEBUG | PiplineQ.py:93 | [Downloader 2] Queue size before get: 2
+2025-12-21 20:25:24 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 2
+2025-12-21 20:25:24 | DEBUG | PiplineQ.py:125 | [Processor 0] Queue size before get: 0
+2025-12-21 20:25:24 | INFO | PiplineQ.py:133 | ⚙️ [Processor 0] Processing image 3
+2025-12-21 20:25:24 | DEBUG | PiplineQ.py:134 | [Processor 0] Image shape: (2327, 1741, 3)
+2025-12-21 20:25:24 | INFO | PiplineQ.py:115 | ✅ [Downloader 2] Processed 1 images
+2025-12-21 20:25:24 | DEBUG | PiplineQ.py:105 | [Downloader 0] Downloaded 61996 bytes for idx=1
+2025-12-21 20:25:24 | DEBUG | PiplineQ.py:109 | [Downloader 0] Image shape after decode: (1104, 736, 3)
+2025-12-21 20:25:24 | DEBUG | PiplineQ.py:93 | [Downloader 0] Queue size before get: 1
+2025-12-21 20:25:24 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 1
+2025-12-21 20:25:24 | DEBUG | PiplineQ.py:125 | [Processor 1] Queue size before get: 0
+2025-12-21 20:25:24 | INFO | PiplineQ.py:133 | ⚙️ [Processor 1] Processing image 1
+2025-12-21 20:25:24 | DEBUG | PiplineQ.py:134 | [Processor 1] Image shape: (1104, 736, 3)
+2025-12-21 20:25:24 | INFO | PiplineQ.py:115 | ✅ [Downloader 0] Processed 1 images
+2025-12-21 20:25:25 | DEBUG | PiplineQ.py:105 | [Downloader 1] Downloaded 1060238 bytes for idx=2
+2025-12-21 20:25:25 | DEBUG | PiplineQ.py:109 | [Downloader 1] Image shape after decode: (2482, 3309, 3)
+2025-12-21 20:25:25 | DEBUG | PiplineQ.py:93 | [Downloader 1] Queue size before get: 0
+2025-12-21 20:25:25 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 0
+2025-12-21 20:25:25 | DEBUG | PiplineQ.py:125 | [Processor 2] Queue size before get: 6
+2025-12-21 20:25:25 | INFO | PiplineQ.py:133 | ⚙️ [Processor 2] Processing image 2
+2025-12-21 20:25:25 | DEBUG | PiplineQ.py:134 | [Processor 2] Image shape: (2482, 3309, 3)
+2025-12-21 20:25:25 | DEBUG | PiplineQ.py:125 | [Processor 3] Queue size before get: 5
+2025-12-21 20:25:25 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 5
+2025-12-21 20:25:25 | INFO | PiplineQ.py:144 | ✅ [Processor 3] Processed 0 images
+2025-12-21 20:25:25 | DEBUG | PiplineQ.py:125 | [Processor 4] Queue size before get: 4
+2025-12-21 20:25:25 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 4
+2025-12-21 20:25:25 | INFO | PiplineQ.py:144 | ✅ [Processor 4] Processed 0 images
+2025-12-21 20:25:25 | DEBUG | PiplineQ.py:125 | [Processor 5] Queue size before get: 3
+2025-12-21 20:25:25 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 3
+2025-12-21 20:25:25 | INFO | PiplineQ.py:144 | ✅ [Processor 5] Processed 0 images
+2025-12-21 20:25:25 | INFO | PiplineQ.py:115 | ✅ [Downloader 1] Processed 1 images
+2025-12-21 20:25:25 | DEBUG | PiplineQ.py:201 | [Pipeline] Download results: [1, 1, 1]
+2025-12-21 20:25:25 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=3, breed=Snowshoe, image shape=(2327, 1741, 3)
+2025-12-21 20:25:25 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=1, breed=Himalayan, image shape=(1104, 736, 3)
+2025-12-21 20:25:25 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=2, breed=Singapura, image shape=(2482, 3309, 3)
+2025-12-21 20:26:04 | DEBUG | proactor_events.py:629 | Using proactor: IocpProactor
+2025-12-21 20:26:04 | INFO | PiplineQ.py:176 | 🚀 Starting pipeline...
+2025-12-21 20:26:04 | DEBUG | PiplineQ.py:179 | [Pipeline] Limit=3, download_workers=3, conv_workers=6, save_workers=4
+2025-12-21 20:26:04 | INFO | PiplineQ.py:68 | ⬇️ Fetching image URLs...
+2025-12-21 20:26:06 | DEBUG | PiplineQ.py:77 | [Fetcher] Received 3 items from API
+2025-12-21 20:26:06 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=1, breed=LaPerm, url=https://cdn2.thecatapi.com/images/aKbsEYjSl.jpg
+2025-12-21 20:26:06 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=2, breed=Bambino, url=https://cdn2.thecatapi.com/images/wFQIf01uy.jpg
+2025-12-21 20:26:06 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=3, breed=Maine Coon, url=https://cdn2.thecatapi.com/images/vXb2jdNoo.jpg
+2025-12-21 20:26:06 | DEBUG | PiplineQ.py:93 | [Downloader 0] Queue size before get: 5
+2025-12-21 20:26:06 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 0] Downloading image 1: LaPerm
+2025-12-21 20:26:06 | DEBUG | PiplineQ.py:93 | [Downloader 1] Queue size before get: 4
+2025-12-21 20:26:06 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 1] Downloading image 2: Bambino
+2025-12-21 20:26:06 | DEBUG | PiplineQ.py:93 | [Downloader 2] Queue size before get: 3
+2025-12-21 20:26:06 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 2] Downloading image 3: Maine Coon
+2025-12-21 20:26:06 | DEBUG | PiplineQ.py:105 | [Downloader 0] Downloaded 98326 bytes for idx=1
+2025-12-21 20:26:06 | DEBUG | PiplineQ.py:109 | [Downloader 0] Image shape after decode: (890, 1074, 3)
+2025-12-21 20:26:06 | DEBUG | PiplineQ.py:93 | [Downloader 0] Queue size before get: 2
+2025-12-21 20:26:06 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 2
+2025-12-21 20:26:06 | DEBUG | PiplineQ.py:125 | [Processor 0] Queue size before get: 0
+2025-12-21 20:26:06 | INFO | PiplineQ.py:133 | ⚙️ [Processor 0] Processing image 1
+2025-12-21 20:26:06 | DEBUG | PiplineQ.py:134 | [Processor 0] Image shape: (890, 1074, 3)
+2025-12-21 20:26:06 | INFO | PiplineQ.py:115 | ✅ [Downloader 0] Processed 1 images
+2025-12-21 20:26:06 | DEBUG | PiplineQ.py:105 | [Downloader 2] Downloaded 182172 bytes for idx=3
+2025-12-21 20:26:06 | DEBUG | PiplineQ.py:109 | [Downloader 2] Image shape after decode: (1080, 1080, 3)
+2025-12-21 20:26:06 | DEBUG | PiplineQ.py:93 | [Downloader 2] Queue size before get: 1
+2025-12-21 20:26:06 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 1
+2025-12-21 20:26:06 | DEBUG | PiplineQ.py:125 | [Processor 1] Queue size before get: 0
+2025-12-21 20:26:06 | INFO | PiplineQ.py:133 | ⚙️ [Processor 1] Processing image 3
+2025-12-21 20:26:06 | DEBUG | PiplineQ.py:134 | [Processor 1] Image shape: (1080, 1080, 3)
+2025-12-21 20:26:06 | INFO | PiplineQ.py:115 | ✅ [Downloader 2] Processed 1 images
+2025-12-21 20:26:07 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=1, breed=LaPerm, image shape=(890, 1074, 3)
+2025-12-21 20:26:07 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=3, breed=Maine Coon, image shape=(1080, 1080, 3)
+2025-12-21 20:26:22 | DEBUG | PiplineQ.py:105 | [Downloader 1] Downloaded 360537 bytes for idx=2
+2025-12-21 20:26:22 | DEBUG | PiplineQ.py:109 | [Downloader 1] Image shape after decode: (800, 1000, 3)
+2025-12-21 20:26:22 | DEBUG | PiplineQ.py:93 | [Downloader 1] Queue size before get: 0
+2025-12-21 20:26:22 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 0
+2025-12-21 20:26:22 | DEBUG | PiplineQ.py:125 | [Processor 2] Queue size before get: 6
+2025-12-21 20:26:22 | INFO | PiplineQ.py:133 | ⚙️ [Processor 2] Processing image 2
+2025-12-21 20:26:22 | DEBUG | PiplineQ.py:134 | [Processor 2] Image shape: (800, 1000, 3)
+2025-12-21 20:26:22 | DEBUG | PiplineQ.py:125 | [Processor 3] Queue size before get: 5
+2025-12-21 20:26:22 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 5
+2025-12-21 20:26:22 | INFO | PiplineQ.py:144 | ✅ [Processor 3] Processed 0 images
+2025-12-21 20:26:22 | DEBUG | PiplineQ.py:125 | [Processor 4] Queue size before get: 4
+2025-12-21 20:26:22 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 4
+2025-12-21 20:26:22 | INFO | PiplineQ.py:144 | ✅ [Processor 4] Processed 0 images
+2025-12-21 20:26:22 | DEBUG | PiplineQ.py:125 | [Processor 5] Queue size before get: 3
+2025-12-21 20:26:22 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 3
+2025-12-21 20:26:22 | INFO | PiplineQ.py:144 | ✅ [Processor 5] Processed 0 images
+2025-12-21 20:26:22 | INFO | PiplineQ.py:115 | ✅ [Downloader 1] Processed 1 images
+2025-12-21 20:26:22 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=2, breed=Bambino, image shape=(800, 1000, 3)
+2025-12-21 20:26:22 | DEBUG | PiplineQ.py:201 | [Pipeline] Download results: [1, 1, 1]
+2025-12-21 20:26:58 | DEBUG | proactor_events.py:629 | Using proactor: IocpProactor
+2025-12-21 20:26:58 | INFO | PiplineQ.py:176 | 🚀 Starting pipeline...
+2025-12-21 20:26:58 | DEBUG | PiplineQ.py:179 | [Pipeline] Limit=3, download_workers=3, conv_workers=6, save_workers=4
+2025-12-21 20:26:58 | INFO | PiplineQ.py:68 | ⬇️ Fetching image URLs...
+2025-12-21 20:26:59 | DEBUG | PiplineQ.py:77 | [Fetcher] Received 3 items from API
+2025-12-21 20:26:59 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=1, breed=Exotic Shorthair, url=https://cdn2.thecatapi.com/images/u3V0SSE-F.jpg
+2025-12-21 20:26:59 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=2, breed=Munchkin, url=https://cdn2.thecatapi.com/images/uk0SrrBbQ.jpg
+2025-12-21 20:26:59 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=3, breed=Norwegian Forest Cat, url=https://cdn2.thecatapi.com/images/rBuGgH_Wj.jpg
+2025-12-21 20:26:59 | DEBUG | PiplineQ.py:93 | [Downloader 0] Queue size before get: 5
+2025-12-21 20:26:59 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 0] Downloading image 1: Exotic Shorthair
+2025-12-21 20:26:59 | DEBUG | PiplineQ.py:93 | [Downloader 1] Queue size before get: 4
+2025-12-21 20:26:59 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 1] Downloading image 2: Munchkin
+2025-12-21 20:26:59 | DEBUG | PiplineQ.py:93 | [Downloader 2] Queue size before get: 3
+2025-12-21 20:26:59 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 2] Downloading image 3: Norwegian Forest Cat
+2025-12-21 20:27:00 | DEBUG | PiplineQ.py:105 | [Downloader 0] Downloaded 107369 bytes for idx=1
+2025-12-21 20:27:00 | DEBUG | PiplineQ.py:109 | [Downloader 0] Image shape after decode: (792, 1188, 3)
+2025-12-21 20:27:00 | DEBUG | PiplineQ.py:93 | [Downloader 0] Queue size before get: 2
+2025-12-21 20:27:00 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 2
+2025-12-21 20:27:00 | DEBUG | PiplineQ.py:125 | [Processor 0] Queue size before get: 0
+2025-12-21 20:27:00 | INFO | PiplineQ.py:133 | ⚙️ [Processor 0] Processing image 1
+2025-12-21 20:27:00 | DEBUG | PiplineQ.py:134 | [Processor 0] Image shape: (792, 1188, 3)
+2025-12-21 20:27:00 | INFO | PiplineQ.py:115 | ✅ [Downloader 0] Processed 1 images
+2025-12-21 20:27:00 | DEBUG | PiplineQ.py:105 | [Downloader 1] Downloaded 451899 bytes for idx=2
+2025-12-21 20:27:00 | DEBUG | PiplineQ.py:109 | [Downloader 1] Image shape after decode: (2097, 2329, 3)
+2025-12-21 20:27:00 | DEBUG | PiplineQ.py:93 | [Downloader 1] Queue size before get: 1
+2025-12-21 20:27:00 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 1
+2025-12-21 20:27:00 | DEBUG | PiplineQ.py:125 | [Processor 1] Queue size before get: 0
+2025-12-21 20:27:00 | INFO | PiplineQ.py:133 | ⚙️ [Processor 1] Processing image 2
+2025-12-21 20:27:00 | DEBUG | PiplineQ.py:134 | [Processor 1] Image shape: (2097, 2329, 3)
+2025-12-21 20:27:00 | INFO | PiplineQ.py:115 | ✅ [Downloader 1] Processed 1 images
+2025-12-21 20:27:00 | DEBUG | PiplineQ.py:105 | [Downloader 2] Downloaded 2618957 bytes for idx=3
+2025-12-21 20:27:00 | DEBUG | PiplineQ.py:109 | [Downloader 2] Image shape after decode: (2160, 3840, 3)
+2025-12-21 20:27:00 | DEBUG | PiplineQ.py:93 | [Downloader 2] Queue size before get: 0
+2025-12-21 20:27:00 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 0
+2025-12-21 20:27:00 | DEBUG | PiplineQ.py:125 | [Processor 2] Queue size before get: 6
+2025-12-21 20:27:00 | INFO | PiplineQ.py:133 | ⚙️ [Processor 2] Processing image 3
+2025-12-21 20:27:00 | DEBUG | PiplineQ.py:134 | [Processor 2] Image shape: (2160, 3840, 3)
+2025-12-21 20:27:00 | DEBUG | PiplineQ.py:125 | [Processor 3] Queue size before get: 5
+2025-12-21 20:27:00 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 5
+2025-12-21 20:27:00 | INFO | PiplineQ.py:144 | ✅ [Processor 3] Processed 0 images
+2025-12-21 20:27:00 | DEBUG | PiplineQ.py:125 | [Processor 4] Queue size before get: 4
+2025-12-21 20:27:00 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 4
+2025-12-21 20:27:00 | INFO | PiplineQ.py:144 | ✅ [Processor 4] Processed 0 images
+2025-12-21 20:27:00 | DEBUG | PiplineQ.py:125 | [Processor 5] Queue size before get: 3
+2025-12-21 20:27:00 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 3
+2025-12-21 20:27:00 | INFO | PiplineQ.py:144 | ✅ [Processor 5] Processed 0 images
+2025-12-21 20:27:00 | INFO | PiplineQ.py:115 | ✅ [Downloader 2] Processed 1 images
+2025-12-21 20:27:00 | DEBUG | PiplineQ.py:201 | [Pipeline] Download results: [1, 1, 1]
+2025-12-21 20:27:00 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=1, breed=Exotic Shorthair, image shape=(792, 1188, 3)
+2025-12-21 20:27:00 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=2, breed=Munchkin, image shape=(2097, 2329, 3)
+2025-12-21 20:27:01 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=3, breed=Norwegian Forest Cat, image shape=(2160, 3840, 3)
+2025-12-21 20:27:25 | DEBUG | proactor_events.py:629 | Using proactor: IocpProactor
+2025-12-21 20:27:25 | INFO | PiplineQ.py:176 | 🚀 Starting pipeline...
+2025-12-21 20:27:25 | DEBUG | PiplineQ.py:179 | [Pipeline] Limit=3, download_workers=3, conv_workers=6, save_workers=4
+2025-12-21 20:27:25 | INFO | PiplineQ.py:68 | ⬇️ Fetching image URLs...
+2025-12-21 20:27:26 | DEBUG | PiplineQ.py:77 | [Fetcher] Received 3 items from API
+2025-12-21 20:27:26 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=1, breed=Bengal, url=https://cdn2.thecatapi.com/images/8pCFG7gCV.jpg
+2025-12-21 20:27:26 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=2, breed=Bengal, url=https://cdn2.thecatapi.com/images/udZiLDG_E.jpg
+2025-12-21 20:27:26 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=3, breed=Japanese Bobtail, url=https://cdn2.thecatapi.com/images/RfdGhgEf3.jpg
+2025-12-21 20:27:26 | DEBUG | PiplineQ.py:93 | [Downloader 0] Queue size before get: 5
+2025-12-21 20:27:26 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 0] Downloading image 1: Bengal
+2025-12-21 20:27:26 | DEBUG | PiplineQ.py:93 | [Downloader 1] Queue size before get: 4
+2025-12-21 20:27:26 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 1] Downloading image 2: Bengal
+2025-12-21 20:27:26 | DEBUG | PiplineQ.py:93 | [Downloader 2] Queue size before get: 3
+2025-12-21 20:27:26 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 2] Downloading image 3: Japanese Bobtail
+2025-12-21 20:27:27 | DEBUG | PiplineQ.py:105 | [Downloader 0] Downloaded 105734 bytes for idx=1
+2025-12-21 20:27:27 | DEBUG | PiplineQ.py:109 | [Downloader 0] Image shape after decode: (937, 750, 3)
+2025-12-21 20:27:27 | DEBUG | PiplineQ.py:93 | [Downloader 0] Queue size before get: 2
+2025-12-21 20:27:27 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 2
+2025-12-21 20:27:27 | DEBUG | PiplineQ.py:125 | [Processor 0] Queue size before get: 0
+2025-12-21 20:27:27 | INFO | PiplineQ.py:133 | ⚙️ [Processor 0] Processing image 1
+2025-12-21 20:27:27 | DEBUG | PiplineQ.py:134 | [Processor 0] Image shape: (937, 750, 3)
+2025-12-21 20:27:27 | INFO | PiplineQ.py:115 | ✅ [Downloader 0] Processed 1 images
+2025-12-21 20:27:27 | DEBUG | PiplineQ.py:105 | [Downloader 1] Downloaded 359243 bytes for idx=2
+2025-12-21 20:27:27 | DEBUG | PiplineQ.py:109 | [Downloader 1] Image shape after decode: (1100, 880, 3)
+2025-12-21 20:27:27 | DEBUG | PiplineQ.py:93 | [Downloader 1] Queue size before get: 1
+2025-12-21 20:27:27 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 1
+2025-12-21 20:27:27 | DEBUG | PiplineQ.py:125 | [Processor 1] Queue size before get: 0
+2025-12-21 20:27:27 | INFO | PiplineQ.py:133 | ⚙️ [Processor 1] Processing image 2
+2025-12-21 20:27:27 | DEBUG | PiplineQ.py:134 | [Processor 1] Image shape: (1100, 880, 3)
+2025-12-21 20:27:27 | DEBUG | PiplineQ.py:105 | [Downloader 2] Downloaded 180342 bytes for idx=3
+2025-12-21 20:27:27 | DEBUG | PiplineQ.py:109 | [Downloader 2] Image shape after decode: (1440, 1920, 3)
+2025-12-21 20:27:27 | DEBUG | PiplineQ.py:93 | [Downloader 2] Queue size before get: 0
+2025-12-21 20:27:27 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 0
+2025-12-21 20:27:27 | DEBUG | PiplineQ.py:125 | [Processor 2] Queue size before get: 6
+2025-12-21 20:27:27 | INFO | PiplineQ.py:133 | ⚙️ [Processor 2] Processing image 3
+2025-12-21 20:27:27 | DEBUG | PiplineQ.py:134 | [Processor 2] Image shape: (1440, 1920, 3)
+2025-12-21 20:27:27 | DEBUG | PiplineQ.py:125 | [Processor 3] Queue size before get: 5
+2025-12-21 20:27:27 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 5
+2025-12-21 20:27:27 | INFO | PiplineQ.py:144 | ✅ [Processor 3] Processed 0 images
+2025-12-21 20:27:27 | DEBUG | PiplineQ.py:125 | [Processor 4] Queue size before get: 4
+2025-12-21 20:27:27 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 4
+2025-12-21 20:27:27 | INFO | PiplineQ.py:144 | ✅ [Processor 4] Processed 0 images
+2025-12-21 20:27:27 | DEBUG | PiplineQ.py:125 | [Processor 5] Queue size before get: 3
+2025-12-21 20:27:27 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 3
+2025-12-21 20:27:27 | INFO | PiplineQ.py:144 | ✅ [Processor 5] Processed 0 images
+2025-12-21 20:27:27 | INFO | PiplineQ.py:115 | ✅ [Downloader 1] Processed 1 images
+2025-12-21 20:27:27 | INFO | PiplineQ.py:115 | ✅ [Downloader 2] Processed 1 images
+2025-12-21 20:27:27 | DEBUG | PiplineQ.py:201 | [Pipeline] Download results: [1, 1, 1]
+2025-12-21 20:27:27 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=1, breed=Bengal, image shape=(937, 750, 3)
+2025-12-21 20:27:27 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=2, breed=Bengal, image shape=(1100, 880, 3)
+2025-12-21 20:27:27 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=3, breed=Japanese Bobtail, image shape=(1440, 1920, 3)
+2025-12-21 20:27:37 | DEBUG | PiplineQ.py:36 | [ConvolutionWorker] Finished processing idx=1
+2025-12-21 20:27:37 | DEBUG | PiplineQ.py:125 | [Processor 0] Queue size before get: 2
+2025-12-21 20:27:37 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 2
+2025-12-21 20:27:37 | INFO | PiplineQ.py:144 | ✅ [Processor 0] Processed 1 images
+2025-12-21 20:27:37 | DEBUG | PiplineQ.py:161 | [Saver] Saving original image for idx=1, shape=(937, 750, 3)
+2025-12-21 20:27:37 | INFO | PiplineQ.py:167 | 💾 Saved: 1_Bengal_original.png
+2025-12-21 20:27:37 | DEBUG | PiplineQ.py:161 | [Saver] Saving cv_edges image for idx=1, shape=(937, 750)
+2025-12-21 20:27:37 | INFO | PiplineQ.py:167 | 💾 Saved: 1_Bengal_cv_edges.png
+2025-12-21 20:27:37 | DEBUG | PiplineQ.py:161 | [Saver] Saving my_edges image for idx=1, shape=(937, 750)
+2025-12-21 20:27:37 | INFO | PiplineQ.py:167 | 💾 Saved: 1_Bengal_my_edges.png
+2025-12-21 20:27:40 | DEBUG | PiplineQ.py:36 | [ConvolutionWorker] Finished processing idx=2
+2025-12-21 20:27:40 | DEBUG | PiplineQ.py:125 | [Processor 1] Queue size before get: 1
+2025-12-21 20:27:40 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 1
+2025-12-21 20:27:40 | INFO | PiplineQ.py:144 | ✅ [Processor 1] Processed 1 images
+2025-12-21 20:27:40 | DEBUG | PiplineQ.py:161 | [Saver] Saving original image for idx=2, shape=(1100, 880, 3)
+2025-12-21 20:27:40 | INFO | PiplineQ.py:167 | 💾 Saved: 2_Bengal_original.png
+2025-12-21 20:27:40 | DEBUG | PiplineQ.py:161 | [Saver] Saving cv_edges image for idx=2, shape=(1100, 880)
+2025-12-21 20:27:40 | INFO | PiplineQ.py:167 | 💾 Saved: 2_Bengal_cv_edges.png
+2025-12-21 20:27:40 | DEBUG | PiplineQ.py:161 | [Saver] Saving my_edges image for idx=2, shape=(1100, 880)
+2025-12-21 20:27:40 | INFO | PiplineQ.py:167 | 💾 Saved: 2_Bengal_my_edges.png
+2025-12-21 20:28:01 | DEBUG | PiplineQ.py:36 | [ConvolutionWorker] Finished processing idx=3
+2025-12-21 20:28:01 | DEBUG | PiplineQ.py:125 | [Processor 2] Queue size before get: 0
+2025-12-21 20:28:01 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 0
+2025-12-21 20:28:01 | INFO | PiplineQ.py:144 | ✅ [Processor 2] Processed 1 images
+2025-12-21 20:28:01 | DEBUG | PiplineQ.py:161 | [Saver] Saving original image for idx=3, shape=(1440, 1920, 3)
+2025-12-21 20:28:01 | INFO | PiplineQ.py:171 | ✅ [Saver] Saved 0 images total
+2025-12-21 20:28:01 | DEBUG | PiplineQ.py:204 | [Pipeline] Convolution results: [1, 1, 1, 0, 0, 0]
+2025-12-21 20:28:01 | INFO | PiplineQ.py:171 | ✅ [Saver] Saved 3 images total
+2025-12-21 20:28:01 | INFO | PiplineQ.py:171 | ✅ [Saver] Saved 3 images total
+2025-12-21 20:28:01 | INFO | PiplineQ.py:167 | 💾 Saved: 3_Japanese_Bobtail_original.png
+2025-12-21 20:28:01 | DEBUG | PiplineQ.py:161 | [Saver] Saving cv_edges image for idx=3, shape=(1440, 1920)
+2025-12-21 20:28:01 | INFO | PiplineQ.py:167 | 💾 Saved: 3_Japanese_Bobtail_cv_edges.png
+2025-12-21 20:28:01 | DEBUG | PiplineQ.py:161 | [Saver] Saving my_edges image for idx=3, shape=(1440, 1920)
+2025-12-21 20:28:01 | INFO | PiplineQ.py:167 | 💾 Saved: 3_Japanese_Bobtail_my_edges.png
+2025-12-21 20:28:01 | INFO | PiplineQ.py:171 | ✅ [Saver] Saved 3 images total
+2025-12-21 20:28:01 | DEBUG | PiplineQ.py:209 | [Pipeline] Save results: [3, 3, 3, 0]
+2025-12-21 20:28:01 | INFO | PiplineQ.py:217 | ============================================================
+2025-12-21 20:28:01 | INFO | PiplineQ.py:218 | 📊 PIPELINE STATISTICS:
+2025-12-21 20:28:01 | INFO | PiplineQ.py:219 |    Total downloaded: 3
+2025-12-21 20:28:01 | INFO | PiplineQ.py:220 |    Total processed: 3
+2025-12-21 20:28:01 | INFO | PiplineQ.py:221 |    Total saved: [3, 3, 3, 0]
+2025-12-21 20:28:01 | INFO | PiplineQ.py:222 |    Total time: 35.73 seconds
+2025-12-21 20:28:01 | INFO | PiplineQ.py:223 | 🎉 Pipeline completed successfully!
+2025-12-21 20:43:06 | DEBUG | proactor_events.py:629 | Using proactor: IocpProactor
+2025-12-21 20:43:06 | INFO | PiplineQ.py:176 | 🚀 Starting pipeline...
+2025-12-21 20:43:06 | DEBUG | PiplineQ.py:179 | [Pipeline] Limit=3, download_workers=3, conv_workers=6, save_workers=4
+2025-12-21 20:43:06 | INFO | PiplineQ.py:68 | ⬇️ Fetching image URLs...
+2025-12-21 20:43:07 | DEBUG | PiplineQ.py:77 | [Fetcher] Received 3 items from API
+2025-12-21 20:43:07 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=1, breed=Exotic Shorthair, url=https://cdn2.thecatapi.com/images/MPnl26tDB.jpg
+2025-12-21 20:43:07 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=2, breed=Korat, url=https://cdn2.thecatapi.com/images/xPuWATvp9.jpg
+2025-12-21 20:43:07 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=3, breed=Ragdoll, url=https://cdn2.thecatapi.com/images/ILx2VfmiR.jpg
+2025-12-21 20:43:07 | DEBUG | PiplineQ.py:93 | [Downloader 0] Queue size before get: 5
+2025-12-21 20:43:07 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 0] Downloading image 1: Exotic Shorthair
+2025-12-21 20:43:07 | DEBUG | PiplineQ.py:93 | [Downloader 1] Queue size before get: 4
+2025-12-21 20:43:07 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 1] Downloading image 2: Korat
+2025-12-21 20:43:07 | DEBUG | PiplineQ.py:93 | [Downloader 2] Queue size before get: 3
+2025-12-21 20:43:07 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 2] Downloading image 3: Ragdoll
+2025-12-21 20:43:08 | DEBUG | PiplineQ.py:105 | [Downloader 2] Downloaded 52262 bytes for idx=3
+2025-12-21 20:43:08 | DEBUG | PiplineQ.py:109 | [Downloader 2] Image shape after decode: (824, 1200, 3)
+2025-12-21 20:43:08 | DEBUG | PiplineQ.py:93 | [Downloader 2] Queue size before get: 2
+2025-12-21 20:43:08 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 2
+2025-12-21 20:43:08 | DEBUG | PiplineQ.py:125 | [Processor 0] Queue size before get: 0
+2025-12-21 20:43:08 | INFO | PiplineQ.py:133 | ⚙️ [Processor 0] Processing image 3
+2025-12-21 20:43:08 | DEBUG | PiplineQ.py:134 | [Processor 0] Image shape: (824, 1200, 3)
+2025-12-21 20:43:08 | INFO | PiplineQ.py:115 | ✅ [Downloader 2] Processed 1 images
+2025-12-21 20:43:08 | DEBUG | PiplineQ.py:105 | [Downloader 1] Downloaded 105003 bytes for idx=2
+2025-12-21 20:43:08 | DEBUG | PiplineQ.py:109 | [Downloader 1] Image shape after decode: (1350, 1080, 3)
+2025-12-21 20:43:08 | DEBUG | PiplineQ.py:93 | [Downloader 1] Queue size before get: 1
+2025-12-21 20:43:08 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 1
+2025-12-21 20:43:08 | DEBUG | PiplineQ.py:125 | [Processor 1] Queue size before get: 0
+2025-12-21 20:43:08 | INFO | PiplineQ.py:133 | ⚙️ [Processor 1] Processing image 2
+2025-12-21 20:43:08 | DEBUG | PiplineQ.py:134 | [Processor 1] Image shape: (1350, 1080, 3)
+2025-12-21 20:43:08 | INFO | PiplineQ.py:115 | ✅ [Downloader 1] Processed 1 images
+2025-12-21 20:43:08 | DEBUG | PiplineQ.py:105 | [Downloader 0] Downloaded 232736 bytes for idx=1
+2025-12-21 20:43:08 | DEBUG | PiplineQ.py:109 | [Downloader 0] Image shape after decode: (475, 714, 3)
+2025-12-21 20:43:08 | DEBUG | PiplineQ.py:93 | [Downloader 0] Queue size before get: 0
+2025-12-21 20:43:08 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 0
+2025-12-21 20:43:08 | DEBUG | PiplineQ.py:125 | [Processor 2] Queue size before get: 6
+2025-12-21 20:43:08 | INFO | PiplineQ.py:133 | ⚙️ [Processor 2] Processing image 1
+2025-12-21 20:43:08 | DEBUG | PiplineQ.py:134 | [Processor 2] Image shape: (475, 714, 3)
+2025-12-21 20:43:08 | DEBUG | PiplineQ.py:125 | [Processor 3] Queue size before get: 5
+2025-12-21 20:43:08 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 5
+2025-12-21 20:43:08 | INFO | PiplineQ.py:144 | ✅ [Processor 3] Processed 0 images
+2025-12-21 20:43:08 | DEBUG | PiplineQ.py:125 | [Processor 4] Queue size before get: 4
+2025-12-21 20:43:08 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 4
+2025-12-21 20:43:08 | INFO | PiplineQ.py:144 | ✅ [Processor 4] Processed 0 images
+2025-12-21 20:43:08 | DEBUG | PiplineQ.py:125 | [Processor 5] Queue size before get: 3
+2025-12-21 20:43:08 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 3
+2025-12-21 20:43:08 | INFO | PiplineQ.py:144 | ✅ [Processor 5] Processed 0 images
+2025-12-21 20:43:08 | INFO | PiplineQ.py:115 | ✅ [Downloader 0] Processed 1 images
+2025-12-21 20:43:08 | DEBUG | PiplineQ.py:201 | [Pipeline] Download results: [1, 1, 1]
+2025-12-21 20:43:08 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=3, breed=Ragdoll, image shape=(824, 1200, 3)
+2025-12-21 20:43:08 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=2, breed=Korat, image shape=(1350, 1080, 3)
+2025-12-21 20:43:08 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=1, breed=Exotic Shorthair, image shape=(475, 714, 3)
+2025-12-21 20:43:13 | DEBUG | PiplineQ.py:36 | [ConvolutionWorker] Finished processing idx=1
+2025-12-21 20:43:13 | DEBUG | PiplineQ.py:125 | [Processor 2] Queue size before get: 2
+2025-12-21 20:43:13 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 2
+2025-12-21 20:43:13 | INFO | PiplineQ.py:144 | ✅ [Processor 2] Processed 1 images
+2025-12-21 20:43:13 | DEBUG | PiplineQ.py:161 | [Saver] Saving original image for idx=1, shape=(475, 714, 3)
+2025-12-21 20:43:13 | INFO | PiplineQ.py:167 | 💾 Saved: 1_Exotic_Shorthair_original.png
+2025-12-21 20:43:13 | DEBUG | PiplineQ.py:161 | [Saver] Saving cv_edges image for idx=1, shape=(475, 714)
+2025-12-21 20:43:13 | INFO | PiplineQ.py:167 | 💾 Saved: 1_Exotic_Shorthair_cv_edges.png
+2025-12-21 20:43:13 | DEBUG | PiplineQ.py:161 | [Saver] Saving my_edges image for idx=1, shape=(475, 714)
+2025-12-21 20:43:13 | INFO | PiplineQ.py:167 | 💾 Saved: 1_Exotic_Shorthair_my_edges.png
+2025-12-21 20:43:19 | DEBUG | PiplineQ.py:36 | [ConvolutionWorker] Finished processing idx=3
+2025-12-21 20:43:19 | DEBUG | PiplineQ.py:125 | [Processor 0] Queue size before get: 1
+2025-12-21 20:43:19 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 1
+2025-12-21 20:43:19 | INFO | PiplineQ.py:144 | ✅ [Processor 0] Processed 1 images
+2025-12-21 20:43:19 | DEBUG | PiplineQ.py:161 | [Saver] Saving original image for idx=3, shape=(824, 1200, 3)
+2025-12-21 20:43:19 | INFO | PiplineQ.py:167 | 💾 Saved: 3_Ragdoll_original.png
+2025-12-21 20:43:19 | DEBUG | PiplineQ.py:161 | [Saver] Saving cv_edges image for idx=3, shape=(824, 1200)
+2025-12-21 20:43:19 | INFO | PiplineQ.py:167 | 💾 Saved: 3_Ragdoll_cv_edges.png
+2025-12-21 20:43:19 | DEBUG | PiplineQ.py:161 | [Saver] Saving my_edges image for idx=3, shape=(824, 1200)
+2025-12-21 20:43:19 | INFO | PiplineQ.py:167 | 💾 Saved: 3_Ragdoll_my_edges.png
+2025-12-21 20:43:23 | DEBUG | PiplineQ.py:36 | [ConvolutionWorker] Finished processing idx=2
+2025-12-21 20:43:23 | DEBUG | PiplineQ.py:125 | [Processor 1] Queue size before get: 0
+2025-12-21 20:43:23 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 0
+2025-12-21 20:43:23 | INFO | PiplineQ.py:144 | ✅ [Processor 1] Processed 1 images
+2025-12-21 20:43:23 | DEBUG | PiplineQ.py:161 | [Saver] Saving original image for idx=2, shape=(1350, 1080, 3)
+2025-12-21 20:43:23 | INFO | PiplineQ.py:171 | ✅ [Saver] Saved 0 images total
+2025-12-21 20:43:23 | DEBUG | PiplineQ.py:204 | [Pipeline] Convolution results: [1, 1, 1, 0, 0, 0]
+2025-12-21 20:43:23 | INFO | PiplineQ.py:171 | ✅ [Saver] Saved 3 images total
+2025-12-21 20:43:23 | INFO | PiplineQ.py:171 | ✅ [Saver] Saved 3 images total
+2025-12-21 20:43:23 | INFO | PiplineQ.py:167 | 💾 Saved: 2_Korat_original.png
+2025-12-21 20:43:23 | DEBUG | PiplineQ.py:161 | [Saver] Saving cv_edges image for idx=2, shape=(1350, 1080)
+2025-12-21 20:43:23 | INFO | PiplineQ.py:167 | 💾 Saved: 2_Korat_cv_edges.png
+2025-12-21 20:43:23 | DEBUG | PiplineQ.py:161 | [Saver] Saving my_edges image for idx=2, shape=(1350, 1080)
+2025-12-21 20:43:23 | INFO | PiplineQ.py:167 | 💾 Saved: 2_Korat_my_edges.png
+2025-12-21 20:43:23 | INFO | PiplineQ.py:171 | ✅ [Saver] Saved 3 images total
+2025-12-21 20:43:23 | DEBUG | PiplineQ.py:209 | [Pipeline] Save results: [3, 3, 3, 0]
+2025-12-21 20:43:23 | INFO | PiplineQ.py:217 | ============================================================
+2025-12-21 20:43:23 | INFO | PiplineQ.py:218 | 📊 PIPELINE STATISTICS:
+2025-12-21 20:43:23 | INFO | PiplineQ.py:219 |    Total downloaded: 3
+2025-12-21 20:43:23 | INFO | PiplineQ.py:220 |    Total processed: 3
+2025-12-21 20:43:23 | INFO | PiplineQ.py:221 |    Total saved: [3, 3, 3, 0]
+2025-12-21 20:43:23 | INFO | PiplineQ.py:222 |    Total time: 16.42 seconds
+2025-12-21 20:43:23 | INFO | PiplineQ.py:223 | 🎉 Pipeline completed successfully!
+2025-12-21 21:30:15 | DEBUG | proactor_events.py:629 | Using proactor: IocpProactor
+2025-12-21 21:30:15 | INFO | PiplineQ.py:176 | 🚀 Starting pipeline...
+2025-12-21 21:30:15 | DEBUG | PiplineQ.py:179 | [Pipeline] Limit=3, download_workers=3, conv_workers=6, save_workers=4
+2025-12-21 21:30:15 | INFO | PiplineQ.py:68 | ⬇️ Fetching image URLs...
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:77 | [Fetcher] Received 3 items from API
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=1, breed=Russian Blue, url=https://cdn2.thecatapi.com/images/4B7MJpywg.jpg
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=2, breed=Turkish Van, url=https://cdn2.thecatapi.com/images/pCJA3xdYu.jpg
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=3, breed=Aegean, url=https://cdn2.thecatapi.com/images/Hb2N6tYTJ.jpg
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:93 | [Downloader 0] Queue size before get: 5
+2025-12-21 21:30:16 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 0] Downloading image 1: Russian Blue
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:93 | [Downloader 1] Queue size before get: 4
+2025-12-21 21:30:16 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 1] Downloading image 2: Turkish Van
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:93 | [Downloader 2] Queue size before get: 3
+2025-12-21 21:30:16 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 2] Downloading image 3: Aegean
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:105 | [Downloader 2] Downloaded 200953 bytes for idx=3
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:109 | [Downloader 2] Image shape after decode: (1024, 1024, 3)
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:93 | [Downloader 2] Queue size before get: 2
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 2
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:125 | [Processor 0] Queue size before get: 0
+2025-12-21 21:30:16 | INFO | PiplineQ.py:133 | ⚙️ [Processor 0] Processing image 3
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:134 | [Processor 0] Image shape: (1024, 1024, 3)
+2025-12-21 21:30:16 | INFO | PiplineQ.py:115 | ✅ [Downloader 2] Processed 1 images
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:105 | [Downloader 1] Downloaded 127304 bytes for idx=2
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:109 | [Downloader 1] Image shape after decode: (1238, 1080, 3)
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:93 | [Downloader 1] Queue size before get: 1
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 1
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:125 | [Processor 1] Queue size before get: 0
+2025-12-21 21:30:16 | INFO | PiplineQ.py:133 | ⚙️ [Processor 1] Processing image 2
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:134 | [Processor 1] Image shape: (1238, 1080, 3)
+2025-12-21 21:30:16 | INFO | PiplineQ.py:115 | ✅ [Downloader 1] Processed 1 images
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:105 | [Downloader 0] Downloaded 535981 bytes for idx=1
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:109 | [Downloader 0] Image shape after decode: (1333, 2000, 3)
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:93 | [Downloader 0] Queue size before get: 0
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 0
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:125 | [Processor 2] Queue size before get: 6
+2025-12-21 21:30:16 | INFO | PiplineQ.py:133 | ⚙️ [Processor 2] Processing image 1
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:134 | [Processor 2] Image shape: (1333, 2000, 3)
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:125 | [Processor 3] Queue size before get: 5
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 5
+2025-12-21 21:30:16 | INFO | PiplineQ.py:144 | ✅ [Processor 3] Processed 0 images
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:125 | [Processor 4] Queue size before get: 4
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 4
+2025-12-21 21:30:16 | INFO | PiplineQ.py:144 | ✅ [Processor 4] Processed 0 images
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:125 | [Processor 5] Queue size before get: 3
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 3
+2025-12-21 21:30:16 | INFO | PiplineQ.py:144 | ✅ [Processor 5] Processed 0 images
+2025-12-21 21:30:16 | INFO | PiplineQ.py:115 | ✅ [Downloader 0] Processed 1 images
+2025-12-21 21:30:16 | DEBUG | PiplineQ.py:201 | [Pipeline] Download results: [1, 1, 1]
+2025-12-21 21:30:17 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=3, breed=Aegean, image shape=(1024, 1024, 3)
+2025-12-21 21:30:17 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=2, breed=Turkish Van, image shape=(1238, 1080, 3)
+2025-12-21 21:30:17 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=1, breed=Russian Blue, image shape=(1333, 2000, 3)
+2025-12-21 21:30:31 | DEBUG | PiplineQ.py:36 | [ConvolutionWorker] Finished processing idx=2
+2025-12-21 21:30:31 | DEBUG | PiplineQ.py:125 | [Processor 1] Queue size before get: 2
+2025-12-21 21:30:31 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 2
+2025-12-21 21:30:31 | INFO | PiplineQ.py:144 | ✅ [Processor 1] Processed 1 images
+2025-12-21 21:30:31 | DEBUG | PiplineQ.py:161 | [Saver] Saving original image for idx=2, shape=(1238, 1080, 3)
+2025-12-21 21:30:31 | INFO | PiplineQ.py:167 | 💾 Saved: 2_Turkish_Van_original.png
+2025-12-21 21:30:31 | DEBUG | PiplineQ.py:161 | [Saver] Saving cv_edges image for idx=2, shape=(1238, 1080)
+2025-12-21 21:30:31 | INFO | PiplineQ.py:167 | 💾 Saved: 2_Turkish_Van_cv_edges.png
+2025-12-21 21:30:31 | DEBUG | PiplineQ.py:161 | [Saver] Saving my_edges image for idx=2, shape=(1238, 1080)
+2025-12-21 21:30:31 | INFO | PiplineQ.py:167 | 💾 Saved: 2_Turkish_Van_my_edges.png
+2025-12-21 21:30:32 | DEBUG | PiplineQ.py:36 | [ConvolutionWorker] Finished processing idx=3
+2025-12-21 21:30:32 | DEBUG | PiplineQ.py:125 | [Processor 0] Queue size before get: 1
+2025-12-21 21:30:32 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 1
+2025-12-21 21:30:32 | INFO | PiplineQ.py:144 | ✅ [Processor 0] Processed 1 images
+2025-12-21 21:30:32 | DEBUG | PiplineQ.py:161 | [Saver] Saving original image for idx=3, shape=(1024, 1024, 3)
+2025-12-21 21:30:32 | INFO | PiplineQ.py:167 | 💾 Saved: 3_Aegean_original.png
+2025-12-21 21:30:32 | DEBUG | PiplineQ.py:161 | [Saver] Saving cv_edges image for idx=3, shape=(1024, 1024)
+2025-12-21 21:30:32 | INFO | PiplineQ.py:167 | 💾 Saved: 3_Aegean_cv_edges.png
+2025-12-21 21:30:32 | DEBUG | PiplineQ.py:161 | [Saver] Saving my_edges image for idx=3, shape=(1024, 1024)
+2025-12-21 21:30:32 | INFO | PiplineQ.py:167 | 💾 Saved: 3_Aegean_my_edges.png
+2025-12-21 21:44:31 | DEBUG | proactor_events.py:629 | Using proactor: IocpProactor
+2025-12-21 21:44:31 | INFO | PiplineQ.py:176 | 🚀 Starting pipeline...
+2025-12-21 21:44:31 | DEBUG | PiplineQ.py:179 | [Pipeline] Limit=3, download_workers=3, conv_workers=6, save_workers=4
+2025-12-21 21:44:31 | INFO | PiplineQ.py:68 | ⬇️ Fetching image URLs...
+2025-12-21 21:44:32 | DEBUG | PiplineQ.py:77 | [Fetcher] Received 3 items from API
+2025-12-21 21:44:32 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=1, breed=Persian, url=https://cdn2.thecatapi.com/images/Pqtwt4FCq.jpg
+2025-12-21 21:44:32 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=2, breed=Somali, url=https://cdn2.thecatapi.com/images/IFLjrNmc3.jpg
+2025-12-21 21:44:32 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=3, breed=Chantilly-Tiffany, url=https://cdn2.thecatapi.com/images/E4j4aBDx9.jpg
+2025-12-21 21:44:32 | DEBUG | PiplineQ.py:93 | [Downloader 0] Queue size before get: 5
+2025-12-21 21:44:32 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 0] Downloading image 1: Persian
+2025-12-21 21:44:32 | DEBUG | PiplineQ.py:93 | [Downloader 1] Queue size before get: 4
+2025-12-21 21:44:32 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 1] Downloading image 2: Somali
+2025-12-21 21:44:32 | DEBUG | PiplineQ.py:93 | [Downloader 2] Queue size before get: 3
+2025-12-21 21:44:32 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 2] Downloading image 3: Chantilly-Tiffany
+2025-12-21 21:44:50 | DEBUG | proactor_events.py:629 | Using proactor: IocpProactor
+2025-12-21 21:44:50 | INFO | PiplineQ.py:176 | 🚀 Starting pipeline...
+2025-12-21 21:44:50 | DEBUG | PiplineQ.py:179 | [Pipeline] Limit=3, download_workers=3, conv_workers=6, save_workers=4
+2025-12-21 21:44:50 | INFO | PiplineQ.py:68 | ⬇️ Fetching image URLs...
+2025-12-21 21:44:51 | DEBUG | PiplineQ.py:77 | [Fetcher] Received 3 items from API
+2025-12-21 21:44:51 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=1, breed=Javanese, url=https://cdn2.thecatapi.com/images/fWbeAxpQH.jpg
+2025-12-21 21:44:51 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=2, breed=Selkirk Rex, url=https://cdn2.thecatapi.com/images/B2YB13Ydq.jpg
+2025-12-21 21:44:51 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=3, breed=Toyger, url=https://cdn2.thecatapi.com/images/VsxceZVop.jpg
+2025-12-21 21:44:51 | DEBUG | PiplineQ.py:93 | [Downloader 0] Queue size before get: 5
+2025-12-21 21:44:51 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 0] Downloading image 1: Javanese
+2025-12-21 21:44:51 | DEBUG | PiplineQ.py:93 | [Downloader 1] Queue size before get: 4
+2025-12-21 21:44:51 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 1] Downloading image 2: Selkirk Rex
+2025-12-21 21:44:51 | DEBUG | PiplineQ.py:93 | [Downloader 2] Queue size before get: 3
+2025-12-21 21:44:51 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 2] Downloading image 3: Toyger
+2025-12-21 21:44:51 | DEBUG | PiplineQ.py:105 | [Downloader 0] Downloaded 210948 bytes for idx=1
+2025-12-21 21:44:51 | DEBUG | PiplineQ.py:109 | [Downloader 0] Image shape after decode: (733, 1100, 3)
+2025-12-21 21:44:51 | DEBUG | PiplineQ.py:93 | [Downloader 0] Queue size before get: 2
+2025-12-21 21:44:51 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 2
+2025-12-21 21:44:51 | DEBUG | PiplineQ.py:125 | [Processor 0] Queue size before get: 0
+2025-12-21 21:44:51 | INFO | PiplineQ.py:133 | ⚙️ [Processor 0] Processing image 1
+2025-12-21 21:44:51 | DEBUG | PiplineQ.py:134 | [Processor 0] Image shape: (733, 1100, 3)
+2025-12-21 21:44:51 | INFO | PiplineQ.py:115 | ✅ [Downloader 0] Processed 1 images
+2025-12-21 21:44:51 | DEBUG | PiplineQ.py:105 | [Downloader 1] Downloaded 4942239 bytes for idx=2
+2025-12-21 21:44:51 | DEBUG | PiplineQ.py:109 | [Downloader 1] Image shape after decode: (2290, 3447, 3)
+2025-12-21 21:44:51 | DEBUG | PiplineQ.py:93 | [Downloader 1] Queue size before get: 1
+2025-12-21 21:44:51 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 1
+2025-12-21 21:44:51 | DEBUG | PiplineQ.py:125 | [Processor 1] Queue size before get: 0
+2025-12-21 21:44:51 | INFO | PiplineQ.py:133 | ⚙️ [Processor 1] Processing image 2
+2025-12-21 21:44:51 | DEBUG | PiplineQ.py:134 | [Processor 1] Image shape: (2290, 3447, 3)
+2025-12-21 21:44:51 | INFO | PiplineQ.py:115 | ✅ [Downloader 1] Processed 1 images
+2025-12-21 21:44:51 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=1, breed=Javanese, image shape=(733, 1100, 3)
+2025-12-21 21:44:52 | DEBUG | PiplineQ.py:105 | [Downloader 2] Downloaded 93292 bytes for idx=3
+2025-12-21 21:44:52 | DEBUG | PiplineQ.py:109 | [Downloader 2] Image shape after decode: (750, 750, 3)
+2025-12-21 21:44:52 | DEBUG | PiplineQ.py:93 | [Downloader 2] Queue size before get: 0
+2025-12-21 21:44:52 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 0
+2025-12-21 21:44:52 | DEBUG | PiplineQ.py:125 | [Processor 2] Queue size before get: 6
+2025-12-21 21:44:52 | INFO | PiplineQ.py:133 | ⚙️ [Processor 2] Processing image 3
+2025-12-21 21:44:52 | DEBUG | PiplineQ.py:134 | [Processor 2] Image shape: (750, 750, 3)
+2025-12-21 21:44:52 | DEBUG | PiplineQ.py:125 | [Processor 3] Queue size before get: 5
+2025-12-21 21:44:52 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 5
+2025-12-21 21:44:52 | INFO | PiplineQ.py:144 | ✅ [Processor 3] Processed 0 images
+2025-12-21 21:44:52 | DEBUG | PiplineQ.py:125 | [Processor 4] Queue size before get: 4
+2025-12-21 21:44:52 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 4
+2025-12-21 21:44:52 | INFO | PiplineQ.py:144 | ✅ [Processor 4] Processed 0 images
+2025-12-21 21:44:52 | DEBUG | PiplineQ.py:125 | [Processor 5] Queue size before get: 3
+2025-12-21 21:44:52 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 3
+2025-12-21 21:44:52 | INFO | PiplineQ.py:144 | ✅ [Processor 5] Processed 0 images
+2025-12-21 21:44:52 | INFO | PiplineQ.py:115 | ✅ [Downloader 2] Processed 1 images
+2025-12-21 21:44:52 | DEBUG | PiplineQ.py:201 | [Pipeline] Download results: [1, 1, 1]
+2025-12-21 21:44:52 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=2, breed=Selkirk Rex, image shape=(2290, 3447, 3)
+2025-12-21 21:44:52 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=3, breed=Toyger, image shape=(750, 750, 3)
+2025-12-21 21:44:58 | DEBUG | PiplineQ.py:36 | [ConvolutionWorker] Finished processing idx=3
+2025-12-21 21:44:58 | DEBUG | PiplineQ.py:125 | [Processor 2] Queue size before get: 2
+2025-12-21 21:44:58 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 2
+2025-12-21 21:44:58 | INFO | PiplineQ.py:144 | ✅ [Processor 2] Processed 1 images
+2025-12-21 21:44:58 | DEBUG | PiplineQ.py:161 | [Saver] Saving original image for idx=3, shape=(750, 750, 3)
+2025-12-21 21:44:58 | INFO | PiplineQ.py:167 | 💾 Saved: 3_Toyger_original.png
+2025-12-21 21:44:58 | DEBUG | PiplineQ.py:161 | [Saver] Saving cv_edges image for idx=3, shape=(750, 750)
+2025-12-21 21:44:58 | INFO | PiplineQ.py:167 | 💾 Saved: 3_Toyger_cv_edges.png
+2025-12-21 21:44:58 | DEBUG | PiplineQ.py:161 | [Saver] Saving my_edges image for idx=3, shape=(750, 750)
+2025-12-21 21:44:58 | INFO | PiplineQ.py:167 | 💾 Saved: 3_Toyger_my_edges.png
+2025-12-21 21:45:03 | DEBUG | PiplineQ.py:36 | [ConvolutionWorker] Finished processing idx=1
+2025-12-21 21:45:03 | DEBUG | PiplineQ.py:125 | [Processor 0] Queue size before get: 1
+2025-12-21 21:45:03 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 1
+2025-12-21 21:45:03 | INFO | PiplineQ.py:144 | ✅ [Processor 0] Processed 1 images
+2025-12-21 21:45:03 | DEBUG | PiplineQ.py:161 | [Saver] Saving original image for idx=1, shape=(733, 1100, 3)
+2025-12-21 21:45:03 | INFO | PiplineQ.py:167 | 💾 Saved: 1_Javanese_original.png
+2025-12-21 21:45:03 | DEBUG | PiplineQ.py:161 | [Saver] Saving cv_edges image for idx=1, shape=(733, 1100)
+2025-12-21 21:45:03 | INFO | PiplineQ.py:167 | 💾 Saved: 1_Javanese_cv_edges.png
+2025-12-21 21:45:03 | DEBUG | PiplineQ.py:161 | [Saver] Saving my_edges image for idx=1, shape=(733, 1100)
+2025-12-21 21:45:03 | INFO | PiplineQ.py:167 | 💾 Saved: 1_Javanese_my_edges.png
+2025-12-21 21:46:05 | DEBUG | PiplineQ.py:36 | [ConvolutionWorker] Finished processing idx=2
+2025-12-21 21:46:05 | DEBUG | PiplineQ.py:125 | [Processor 1] Queue size before get: 0
+2025-12-21 21:46:05 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 0
+2025-12-21 21:46:05 | INFO | PiplineQ.py:144 | ✅ [Processor 1] Processed 1 images
+2025-12-21 21:46:05 | DEBUG | PiplineQ.py:161 | [Saver] Saving original image for idx=2, shape=(2290, 3447, 3)
+2025-12-21 21:46:05 | INFO | PiplineQ.py:171 | ✅ [Saver] Saved 0 images total
+2025-12-21 21:46:05 | DEBUG | PiplineQ.py:204 | [Pipeline] Convolution results: [1, 1, 1, 0, 0, 0]
+2025-12-21 21:46:05 | INFO | PiplineQ.py:171 | ✅ [Saver] Saved 3 images total
+2025-12-21 21:46:05 | INFO | PiplineQ.py:171 | ✅ [Saver] Saved 3 images total
+2025-12-21 21:46:05 | INFO | PiplineQ.py:167 | 💾 Saved: 2_Selkirk_Rex_original.png
+2025-12-21 21:46:05 | DEBUG | PiplineQ.py:161 | [Saver] Saving cv_edges image for idx=2, shape=(2290, 3447)
+2025-12-21 21:46:05 | INFO | PiplineQ.py:167 | 💾 Saved: 2_Selkirk_Rex_cv_edges.png
+2025-12-21 21:46:05 | DEBUG | PiplineQ.py:161 | [Saver] Saving my_edges image for idx=2, shape=(2290, 3447)
+2025-12-21 21:46:05 | INFO | PiplineQ.py:167 | 💾 Saved: 2_Selkirk_Rex_my_edges.png
+2025-12-21 21:46:05 | INFO | PiplineQ.py:171 | ✅ [Saver] Saved 3 images total
+2025-12-21 21:46:05 | DEBUG | PiplineQ.py:209 | [Pipeline] Save results: [3, 3, 3, 0]
+2025-12-21 21:46:06 | INFO | PiplineQ.py:217 | ============================================================
+2025-12-21 21:46:06 | INFO | PiplineQ.py:218 | 📊 PIPELINE STATISTICS:
+2025-12-21 21:46:06 | INFO | PiplineQ.py:219 |    Total downloaded: 3
+2025-12-21 21:46:06 | INFO | PiplineQ.py:220 |    Total processed: 3
+2025-12-21 21:46:06 | INFO | PiplineQ.py:221 |    Total saved: [3, 3, 3, 0]
+2025-12-21 21:46:06 | INFO | PiplineQ.py:222 |    Total time: 75.83 seconds
+2025-12-21 21:46:06 | INFO | PiplineQ.py:223 | 🎉 Pipeline completed successfully!
+2025-12-21 21:52:48 | DEBUG | proactor_events.py:629 | Using proactor: IocpProactor
+2025-12-21 21:52:48 | INFO | PiplineQ.py:176 | 🚀 Starting pipeline...
+2025-12-21 21:52:48 | DEBUG | PiplineQ.py:179 | [Pipeline] Limit=3, download_workers=3, conv_workers=6, save_workers=4
+2025-12-21 21:52:48 | INFO | PiplineQ.py:68 | ⬇️ Fetching image URLs...
+2025-12-21 21:52:49 | DEBUG | PiplineQ.py:77 | [Fetcher] Received 3 items from API
+2025-12-21 21:52:49 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=1, breed=Burmese, url=https://cdn2.thecatapi.com/images/4lXnnfxac.jpg
+2025-12-21 21:52:49 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=2, breed=Exotic Shorthair, url=https://cdn2.thecatapi.com/images/u2Ezm_CgQ.jpg
+2025-12-21 21:52:49 | DEBUG | PiplineQ.py:81 | [Fetcher] Putting in queue: idx=3, breed=Persian, url=https://cdn2.thecatapi.com/images/AYfFc4vOB.jpg
+2025-12-21 21:52:49 | DEBUG | PiplineQ.py:93 | [Downloader 0] Queue size before get: 5
+2025-12-21 21:52:49 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 0] Downloading image 1: Burmese
+2025-12-21 21:52:49 | DEBUG | PiplineQ.py:93 | [Downloader 1] Queue size before get: 4
+2025-12-21 21:52:49 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 1] Downloading image 2: Exotic Shorthair
+2025-12-21 21:52:49 | DEBUG | PiplineQ.py:93 | [Downloader 2] Queue size before get: 3
+2025-12-21 21:52:49 | INFO | PiplineQ.py:102 | ⬇️ [Downloader 2] Downloading image 3: Persian
+2025-12-21 21:52:49 | DEBUG | PiplineQ.py:105 | [Downloader 2] Downloaded 325009 bytes for idx=3
+2025-12-21 21:52:49 | DEBUG | PiplineQ.py:109 | [Downloader 2] Image shape after decode: (859, 1280, 3)
+2025-12-21 21:52:49 | DEBUG | PiplineQ.py:93 | [Downloader 2] Queue size before get: 2
+2025-12-21 21:52:49 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 2
+2025-12-21 21:52:49 | DEBUG | PiplineQ.py:125 | [Processor 0] Queue size before get: 0
+2025-12-21 21:52:49 | INFO | PiplineQ.py:133 | ⚙️ [Processor 0] Processing image 3
+2025-12-21 21:52:49 | DEBUG | PiplineQ.py:134 | [Processor 0] Image shape: (859, 1280, 3)
+2025-12-21 21:52:49 | DEBUG | PiplineQ.py:105 | [Downloader 0] Downloaded 92595 bytes for idx=1
+2025-12-21 21:52:49 | DEBUG | PiplineQ.py:109 | [Downloader 0] Image shape after decode: (650, 1250, 3)
+2025-12-21 21:52:49 | DEBUG | PiplineQ.py:93 | [Downloader 0] Queue size before get: 1
+2025-12-21 21:52:49 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 1
+2025-12-21 21:52:49 | DEBUG | PiplineQ.py:125 | [Processor 1] Queue size before get: 0
+2025-12-21 21:52:49 | INFO | PiplineQ.py:133 | ⚙️ [Processor 1] Processing image 1
+2025-12-21 21:52:49 | DEBUG | PiplineQ.py:134 | [Processor 1] Image shape: (650, 1250, 3)
+2025-12-21 21:52:49 | INFO | PiplineQ.py:115 | ✅ [Downloader 2] Processed 1 images
+2025-12-21 21:52:49 | INFO | PiplineQ.py:115 | ✅ [Downloader 0] Processed 1 images
+2025-12-21 21:52:49 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=3, breed=Persian, image shape=(859, 1280, 3)
+2025-12-21 21:52:49 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=1, breed=Burmese, image shape=(650, 1250, 3)
+2025-12-21 21:52:50 | DEBUG | PiplineQ.py:105 | [Downloader 1] Downloaded 175320 bytes for idx=2
+2025-12-21 21:52:50 | DEBUG | PiplineQ.py:109 | [Downloader 1] Image shape after decode: (644, 820, 3)
+2025-12-21 21:52:50 | DEBUG | PiplineQ.py:93 | [Downloader 1] Queue size before get: 0
+2025-12-21 21:52:50 | DEBUG | PiplineQ.py:47 | [PipelineState] Downloader finished. Remaining: 0
+2025-12-21 21:52:50 | DEBUG | PiplineQ.py:125 | [Processor 2] Queue size before get: 6
+2025-12-21 21:52:50 | INFO | PiplineQ.py:133 | ⚙️ [Processor 2] Processing image 2
+2025-12-21 21:52:50 | DEBUG | PiplineQ.py:134 | [Processor 2] Image shape: (644, 820, 3)
+2025-12-21 21:52:50 | DEBUG | PiplineQ.py:125 | [Processor 3] Queue size before get: 5
+2025-12-21 21:52:50 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 5
+2025-12-21 21:52:50 | INFO | PiplineQ.py:144 | ✅ [Processor 3] Processed 0 images
+2025-12-21 21:52:50 | DEBUG | PiplineQ.py:125 | [Processor 4] Queue size before get: 4
+2025-12-21 21:52:50 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 4
+2025-12-21 21:52:50 | INFO | PiplineQ.py:144 | ✅ [Processor 4] Processed 0 images
+2025-12-21 21:52:50 | DEBUG | PiplineQ.py:125 | [Processor 5] Queue size before get: 3
+2025-12-21 21:52:50 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 3
+2025-12-21 21:52:50 | INFO | PiplineQ.py:144 | ✅ [Processor 5] Processed 0 images
+2025-12-21 21:52:50 | INFO | PiplineQ.py:115 | ✅ [Downloader 1] Processed 1 images
+2025-12-21 21:52:50 | DEBUG | PiplineQ.py:201 | [Pipeline] Download results: [1, 1, 1]
+2025-12-21 21:52:50 | DEBUG | PiplineQ.py:26 | [ConvolutionWorker] Start processing idx=2, breed=Exotic Shorthair, image shape=(644, 820, 3)
+2025-12-21 21:52:57 | DEBUG | PiplineQ.py:36 | [ConvolutionWorker] Finished processing idx=2
+2025-12-21 21:52:57 | DEBUG | PiplineQ.py:125 | [Processor 2] Queue size before get: 2
+2025-12-21 21:52:57 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 2
+2025-12-21 21:52:57 | INFO | PiplineQ.py:144 | ✅ [Processor 2] Processed 1 images
+2025-12-21 21:52:57 | DEBUG | PiplineQ.py:161 | [Saver] Saving original image for idx=2, shape=(644, 820, 3)
+2025-12-21 21:52:57 | INFO | PiplineQ.py:167 | 💾 Saved: 2_Exotic_Shorthair_original.png
+2025-12-21 21:52:57 | DEBUG | PiplineQ.py:161 | [Saver] Saving cv_edges image for idx=2, shape=(644, 820)
+2025-12-21 21:52:57 | INFO | PiplineQ.py:167 | 💾 Saved: 2_Exotic_Shorthair_cv_edges.png
+2025-12-21 21:52:57 | DEBUG | PiplineQ.py:161 | [Saver] Saving my_edges image for idx=2, shape=(644, 820)
+2025-12-21 21:52:57 | INFO | PiplineQ.py:167 | 💾 Saved: 2_Exotic_Shorthair_my_edges.png
+2025-12-21 21:53:03 | DEBUG | PiplineQ.py:36 | [ConvolutionWorker] Finished processing idx=1
+2025-12-21 21:53:03 | DEBUG | PiplineQ.py:125 | [Processor 1] Queue size before get: 1
+2025-12-21 21:53:03 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 1
+2025-12-21 21:53:03 | INFO | PiplineQ.py:144 | ✅ [Processor 1] Processed 1 images
+2025-12-21 21:53:03 | DEBUG | PiplineQ.py:161 | [Saver] Saving original image for idx=1, shape=(650, 1250, 3)
+2025-12-21 21:53:03 | INFO | PiplineQ.py:167 | 💾 Saved: 1_Burmese_original.png
+2025-12-21 21:53:03 | DEBUG | PiplineQ.py:161 | [Saver] Saving cv_edges image for idx=1, shape=(650, 1250)
+2025-12-21 21:53:03 | INFO | PiplineQ.py:167 | 💾 Saved: 1_Burmese_cv_edges.png
+2025-12-21 21:53:03 | DEBUG | PiplineQ.py:161 | [Saver] Saving my_edges image for idx=1, shape=(650, 1250)
+2025-12-21 21:53:03 | INFO | PiplineQ.py:167 | 💾 Saved: 1_Burmese_my_edges.png
+2025-12-21 21:53:03 | DEBUG | PiplineQ.py:36 | [ConvolutionWorker] Finished processing idx=3
+2025-12-21 21:53:03 | DEBUG | PiplineQ.py:125 | [Processor 0] Queue size before get: 0
+2025-12-21 21:53:03 | DEBUG | PiplineQ.py:52 | [PipelineState] Processor finished. Remaining: 0
+2025-12-21 21:53:03 | INFO | PiplineQ.py:144 | ✅ [Processor 0] Processed 1 images
+2025-12-21 21:53:03 | DEBUG | PiplineQ.py:161 | [Saver] Saving original image for idx=3, shape=(859, 1280, 3)
+2025-12-21 21:53:03 | INFO | PiplineQ.py:171 | ✅ [Saver] Saved 0 images total
+2025-12-21 21:53:03 | DEBUG | PiplineQ.py:204 | [Pipeline] Convolution results: [1, 1, 1, 0, 0, 0]
+2025-12-21 21:53:03 | INFO | PiplineQ.py:171 | ✅ [Saver] Saved 3 images total
+2025-12-21 21:53:03 | INFO | PiplineQ.py:171 | ✅ [Saver] Saved 3 images total
+2025-12-21 21:53:03 | INFO | PiplineQ.py:167 | 💾 Saved: 3_Persian_original.png
+2025-12-21 21:53:03 | DEBUG | PiplineQ.py:161 | [Saver] Saving cv_edges image for idx=3, shape=(859, 1280)
+2025-12-21 21:53:03 | INFO | PiplineQ.py:167 | 💾 Saved: 3_Persian_cv_edges.png
+2025-12-21 21:53:03 | DEBUG | PiplineQ.py:161 | [Saver] Saving my_edges image for idx=3, shape=(859, 1280)
+2025-12-21 21:53:03 | INFO | PiplineQ.py:167 | 💾 Saved: 3_Persian_my_edges.png
+2025-12-21 21:53:03 | INFO | PiplineQ.py:171 | ✅ [Saver] Saved 3 images total
+2025-12-21 21:53:03 | DEBUG | PiplineQ.py:209 | [Pipeline] Save results: [3, 3, 3, 0]
+2025-12-21 21:53:03 | INFO | PiplineQ.py:217 | ============================================================
+2025-12-21 21:53:03 | INFO | PiplineQ.py:218 | 📊 PIPELINE STATISTICS:
+2025-12-21 21:53:03 | INFO | PiplineQ.py:219 |    Total downloaded: 3
+2025-12-21 21:53:03 | INFO | PiplineQ.py:220 |    Total processed: 3
+2025-12-21 21:53:03 | INFO | PiplineQ.py:221 |    Total saved: [3, 3, 3, 0]
+2025-12-21 21:53:03 | INFO | PiplineQ.py:222 |    Total time: 15.40 seconds
+2025-12-21 21:53:03 | INFO | PiplineQ.py:223 | 🎉 Pipeline completed successfully!
